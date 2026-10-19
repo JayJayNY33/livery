@@ -1,0 +1,202 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/schibsted-grotesk';
+@import '@fontsource/atkinson-hyperlegible-next/400.css';
+@import '@fontsource/atkinson-hyperlegible-next/400-italic.css';
+@import '@fontsource/atkinson-hyperlegible-next/700.css';
+
+@theme {
+  --font-display: 'Schibsted Grotesk Variable', 'Schibsted Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Atkinson Hyperlegible Next', ui-sans-serif, system-ui, sans-serif;
+
+  /* Navy ink: hero, header, close */
+  --color-navy-950: #061428;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #12305a;
+  --color-navy-700: #1b3f70;
+
+  /* Medium blue: actions and booked rides only */
+  --color-route-700: #1c4ea6;
+  --color-route-600: #2563c9;
+  --color-route-500: #3b7be0;
+  --color-route-300: #9cc0f5;
+  --color-route-100: #dfeafc;
+
+  /* Planner paper */
+  --color-paper: #f2f5fa;
+  --color-paper-deep: #e6ecf5;
+  --color-rule: #d3dce9;
+  --color-rule-strong: #b9c6d8;
+
+  /* Ink */
+  --color-ink: #0f1e33;
+  --color-ink-soft: #3d4f68;
+  --color-ink-faint: #5a6b82;
+
+  /* Notices */
+  --color-alert: #9a3412;
+  --color-alert-bg: #fff4ec;
+
+  --shadow-card: 0 1px 2px rgb(11 31 58 / 0.06), 0 8px 24px -12px rgb(11 31 58 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(11 31 58 / 0.08), 0 22px 44px -20px rgb(11 31 58 / 0.35);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+  ::selection {
+    background: var(--color-route-300);
+    color: var(--color-navy-950);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-route-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-navy :focus-visible {
+    outline-color: var(--color-route-300);
+  }
+  a[href^='tel:'] {
+    white-space: nowrap;
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+  input,
+  textarea {
+    caret-color: var(--color-route-600);
+  }
+  html {
+    scrollbar-color: var(--color-rule-strong) var(--color-paper);
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Planner paper: faint seven-day column rules */
+  .planner-rules {
+    background-image: linear-gradient(to right, rgb(185 198 216 / 0.38) 1px, transparent 1px);
+    background-size: calc(100% / 7) 100%;
+  }
+  .planner-rules-navy {
+    background-image: linear-gradient(to right, rgb(156 192 245 / 0.08) 1px, transparent 1px);
+    background-size: calc(100% / 7) 100%;
+  }
+}
+
+/* Week strip: booked days fill once, left to right */
+@keyframes book-in {
+  from {
+    transform: scaleY(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.booked-block {
+  transform-origin: top;
+  animation: book-in 700ms var(--ease-out-expo) both;
+}
+
+/* FAQ answer typography */
+.faq-answer p {
+  margin: 0 0 0.9rem;
+}
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+.faq-answer ul {
+  margin: 0.25rem 0 1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+.faq-answer li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+.faq-answer li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 2px;
+  background: var(--color-route-600);
+}
+.faq-answer strong {
+  color: var(--color-navy-900);
+  font-weight: 700;
+}
+.faq-answer a {
+  color: var(--color-route-700);
+  font-weight: 700;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.faq-answer a:hover {
+  color: var(--color-navy-900);
+}
+.faq-answer .faq-important {
+  background: var(--color-alert-bg);
+  border: 1px solid #f3d4bf;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  color: #5b2410;
+}
+.faq-answer .faq-important strong {
+  color: var(--color-alert);
+}
+.faq-answer .faq-important a {
+  color: var(--color-alert);
+}
+.faq-answer .faq-note {
+  color: var(--color-ink-soft);
+  font-size: 0.95em;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 0.8rem;
+}

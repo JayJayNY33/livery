@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T00:00:00Z",
+  "title": "Design System: Fast Track Medical & Livery Transportation",
+  "extensions": {
+    "colorMeta": {
+      "navy-950": { "role": "secondary", "displayName": "Deep Ledger", "canonical": "#061428", "tonalRamp": ["#061428", "#0b1f3a", "#12305a", "#1b3f70", "#3d5a85", "#7088ab", "#a9b8cf", "#e2e8f1"] },
+      "navy-900": { "role": "secondary", "displayName": "Night Ledger Navy", "canonical": "#0b1f3a", "tonalRamp": ["#061428", "#0b1f3a", "#12305a", "#1b3f70", "#3d5a85", "#7088ab", "#a9b8cf", "#e2e8f1"] },
+      "navy-800": { "role": "secondary", "displayName": "Ledger Raised", "canonical": "#12305a", "tonalRamp": ["#061428", "#0b1f3a", "#12305a", "#1b3f70", "#3d5a85", "#7088ab", "#a9b8cf", "#e2e8f1"] },
+      "navy-700": { "role": "secondary", "displayName": "Ledger Edge", "canonical": "#1b3f70", "tonalRamp": ["#061428", "#0b1f3a", "#12305a", "#1b3f70", "#3d5a85", "#7088ab", "#a9b8cf", "#e2e8f1"] },
+      "route-700": { "role": "primary", "displayName": "Pressed Route", "canonical": "#1c4ea6", "tonalRamp": ["#0e2a5c", "#1c4ea6", "#2563c9", "#3b7be0", "#6b9deb", "#9cc0f5", "#c4d9f9", "#dfeafc"] },
+      "route-600": { "role": "primary", "displayName": "Standing-Order Blue", "canonical": "#2563c9", "tonalRamp": ["#0e2a5c", "#1c4ea6", "#2563c9", "#3b7be0", "#6b9deb", "#9cc0f5", "#c4d9f9", "#dfeafc"] },
+      "route-500": { "role": "primary", "displayName": "Lit Route", "canonical": "#3b7be0", "tonalRamp": ["#0e2a5c", "#1c4ea6", "#2563c9", "#3b7be0", "#6b9deb", "#9cc0f5", "#c4d9f9", "#dfeafc"] },
+      "route-300": { "role": "primary", "displayName": "Second-Leg Blue", "canonical": "#9cc0f5", "tonalRamp": ["#0e2a5c", "#1c4ea6", "#2563c9", "#3b7be0", "#6b9deb", "#9cc0f5", "#c4d9f9", "#dfeafc"] },
+      "route-100": { "role": "primary", "displayName": "Planner Wash", "canonical": "#dfeafc", "tonalRamp": ["#0e2a5c", "#1c4ea6", "#2563c9", "#3b7be0", "#6b9deb", "#9cc0f5", "#c4d9f9", "#dfeafc"] },
+      "paper": { "role": "neutral", "displayName": "Planner Paper", "canonical": "#f2f5fa", "tonalRamp": ["oklch(20% 0.02 255)", "oklch(32% 0.02 255)", "oklch(45% 0.02 255)", "oklch(58% 0.02 255)", "oklch(70% 0.018 255)", "oklch(82% 0.015 255)", "oklch(91% 0.012 255)", "oklch(97% 0.007 255)"] },
+      "paper-deep": { "role": "neutral", "displayName": "Folded Paper", "canonical": "#e6ecf5", "tonalRamp": ["oklch(20% 0.02 255)", "oklch(32% 0.02 255)", "oklch(45% 0.02 255)", "oklch(58% 0.02 255)", "oklch(70% 0.018 255)", "oklch(82% 0.015 255)", "oklch(93.5% 0.013 255)", "oklch(97% 0.007 255)"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#d3dce9", "tonalRamp": ["oklch(20% 0.02 255)", "oklch(32% 0.02 255)", "oklch(45% 0.02 255)", "oklch(58% 0.02 255)", "oklch(70% 0.02 255)", "oklch(80% 0.02 255)", "oklch(89% 0.018 255)", "oklch(96% 0.01 255)"] },
+      "rule-strong": { "role": "neutral", "displayName": "Pencil Line", "canonical": "#b9c6d8", "tonalRamp": ["oklch(20% 0.025 255)", "oklch(32% 0.025 255)", "oklch(45% 0.025 255)", "oklch(58% 0.025 255)", "oklch(70% 0.025 255)", "oklch(82% 0.025 255)", "oklch(90% 0.018 255)", "oklch(96% 0.01 255)"] },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#ffffff", "tonalRamp": ["#1a1a1a", "#3a3a3a", "#5c5c5c", "#7f7f7f", "#a3a3a3", "#c7c7c7", "#e6e6e6", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0f1e33", "tonalRamp": ["#0f1e33", "#24364f", "#3d4f68", "#5a6b82", "#7d8ca0", "#a3afbf", "#cbd3de", "#eef1f6"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#3d4f68", "tonalRamp": ["#0f1e33", "#24364f", "#3d4f68", "#5a6b82", "#7d8ca0", "#a3afbf", "#cbd3de", "#eef1f6"] },
+      "ink-faint": { "role": "neutral", "displayName": "Ink Faint", "canonical": "#5a6b82", "tonalRamp": ["#0f1e33", "#24364f", "#3d4f68", "#5a6b82", "#7d8ca0", "#a3afbf", "#cbd3de", "#eef1f6"] },
+      "alert": { "role": "tertiary", "displayName": "Clay Alert", "canonical": "#9a3412", "tonalRamp": ["#3d1407", "#5b2410", "#7c2d12", "#9a3412", "#c2552a", "#e39a76", "#f3d4bf", "#fff4ec"] },
+      "alert-bg": { "role": "tertiary", "displayName": "Clay Alert Field", "canonical": "#fff4ec", "tonalRamp": ["#3d1407", "#5b2410", "#7c2d12", "#9a3412", "#c2552a", "#e39a76", "#f3d4bf", "#fff4ec"] },
+      "alert-rule": { "role": "tertiary", "displayName": "Clay Alert Border", "canonical": "#f3d4bf", "tonalRamp": ["#3d1407", "#5b2410", "#7c2d12", "#9a3412", "#c2552a", "#e39a76", "#f3d4bf", "#fff4ec"] },
+      "alert-ink": { "role": "tertiary", "displayName": "Clay Alert Ink", "canonical": "#5b2410", "tonalRamp": ["#3d1407", "#5b2410", "#7c2d12", "#9a3412", "#c2552a", "#e39a76", "#f3d4bf", "#fff4ec"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only, white on navy; second clause in route-300." },
+      "headline": { "displayName": "Headline", "purpose": "Every section title." },
+      "headline-sm": { "displayName": "Headline Small", "purpose": "Titles of large interactive cards and pull statements." },
+      "title": { "displayName": "Title", "purpose": "Service names and card headings." },
+      "title-sm": { "displayName": "Title Small", "purpose": "Question rows, notice titles, FAQ questions." },
+      "body-lead": { "displayName": "Body Lead", "purpose": "Section intros and hero lede, capped near 34rem." },
+      "body": { "displayName": "Body", "purpose": "Running text at 17px for older readers." },
+      "label": { "displayName": "Label", "purpose": "Legends, table column heads, counts. Bold sentence case." },
+      "day-label": { "displayName": "Day Label", "purpose": "Mon to Sun headers in week strips; tabular." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 1px 2px rgb(11 31 58 / 0.06), 0 8px 24px -12px rgb(11 31 58 / 0.18)", "purpose": "Resting cards, closed FAQ items, service table, image figures, primary hero call." },
+      { "name": "lift", "value": "0 2px 4px rgb(11 31 58 / 0.08), 0 22px 44px -20px rgb(11 31 58 / 0.35)", "purpose": "Floating or focal panels: week strip over the hero, ride check, contact form, open FAQ item." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Nav underline, FAQ expand and toggle, booked-block fill." },
+      { "name": "duration-state", "value": "150ms to 200ms", "purpose": "Color and border transitions on buttons, chips, choices, inputs." },
+      { "name": "duration-reveal", "value": "300ms to 400ms", "purpose": "Nav underline, menu fade, FAQ panel grid-row expand." },
+      { "name": "book-in", "value": "700ms ease-out-expo, scaleY 0.2 to 1 from top, 110ms stagger after 300ms", "purpose": "Booked days fill once, left to right. Disabled under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Call Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action everywhere: call the office, number visible in tabular figures.",
+      "html": "<a class=\"ds-btn-primary\" href=\"tel:+16314069922\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span>Call Us Today <span class=\"ds-num\">631-406-9922</span></span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 16px 24px; border-radius: 12px; background: var(--color-route-600, #2563c9); color: #fff; font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-size: 1.125rem; font-weight: 700; text-decoration: none; box-shadow: var(--shadow-card, 0 1px 2px rgb(11 31 58 / 0.06), 0 8px 24px -12px rgb(11 31 58 / 0.18)); transition: background-color 200ms, transform 200ms; } .ds-btn-primary .ds-num { margin-left: 8px; font-weight: 400; color: var(--color-route-100, #dfeafc); font-variant-numeric: tabular-nums; white-space: nowrap; } .ds-btn-primary:hover { background: var(--color-route-500, #3b7be0); transform: translateY(-2px); } .ds-btn-primary:active { background: var(--color-route-700, #1c4ea6); } .ds-btn-primary:focus-visible { outline: 3px solid var(--color-route-500, #3b7be0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button on Navy",
+      "kind": "button",
+      "refersTo": "button-outline-navy",
+      "description": "Secondary action inside navy regions.",
+      "html": "<div style=\"background:#0b1f3a;padding:24px\"><a class=\"ds-btn-outline\" href=\"#services\">Explore Our Services</a></div>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; padding: 16px 24px; border-radius: 12px; border: 1px solid rgb(255 255 255 / 0.25); color: #fff; font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-size: 1.125rem; font-weight: 700; text-decoration: none; transition: border-color 200ms, background-color 200ms; } .ds-btn-outline:hover { border-color: rgb(255 255 255 / 0.6); background: rgb(255 255 255 / 0.05); } .ds-btn-outline:focus-visible { outline: 3px solid var(--color-route-300, #9cc0f5); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Pill filter with a tabular count; active inverts to navy.",
+      "html": "<div style=\"display:flex;gap:8px\"><button class=\"ds-chip ds-chip-active\">All <span class=\"ds-chip-count\">15</span></button><button class=\"ds-chip\">Medicaid <span class=\"ds-chip-count\">5</span></button></div>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--color-rule-strong, #b9c6d8); background: #fff; color: var(--color-navy-900, #0b1f3a); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: border-color 150ms, background-color 150ms; } .ds-chip:hover { border-color: var(--color-route-500, #3b7be0); } .ds-chip:focus-visible { outline: 3px solid var(--color-route-500, #3b7be0); outline-offset: 3px; } .ds-chip-count { font-size: 0.75rem; color: var(--color-ink-faint, #5a6b82); font-variant-numeric: tabular-nums; } .ds-chip-active { background: var(--color-navy-900, #0b1f3a); border-color: var(--color-navy-900, #0b1f3a); color: #fff; } .ds-chip-active .ds-chip-count { color: var(--color-route-300, #9cc0f5); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Paper-filled field that whitens on focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Phone number<span class=\"ds-req\" aria-hidden=\"true\">*</span></span><input class=\"ds-input\" type=\"tel\" placeholder=\"631-555-0100\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-field-label { font-weight: 700; color: var(--color-navy-900, #0b1f3a); } .ds-req { margin-left: 2px; color: var(--color-route-600, #2563c9); } .ds-input { width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--color-rule-strong, #b9c6d8); background: var(--color-paper, #f2f5fa); color: var(--color-ink, #0f1e33); font: inherit; font-size: 1.02rem; transition: border-color 150ms, background-color 150ms; } .ds-input::placeholder { color: var(--color-ink-faint, #5a6b82); } .ds-input:hover { border-color: var(--color-route-500, #3b7be0); } .ds-input:focus { background: #fff; outline: none; } .ds-input:focus-visible { outline: 3px solid var(--color-route-500, #3b7be0); outline-offset: 1px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "button-call-header",
+      "description": "Sticky navy bar with expo underline on the current link and a persistent call button.",
+      "html": "<header class=\"ds-nav\"><ul><li><a href=\"#\" aria-current=\"location\">Services</a></li><li><a href=\"#\">How It Works</a></li><li><a href=\"#\">FAQ</a></li></ul><a class=\"ds-nav-call\" href=\"tel:+16314069922\">Call Us <span>631-406-9922</span></a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 4.5rem; padding: 0 32px; background: rgb(11 31 58 / 0.95); border-bottom: 1px solid rgb(255 255 255 / 0.1); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; } .ds-nav ul a { position: relative; display: block; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; color: rgb(223 234 252 / 0.75); text-decoration: none; transition: color 200ms; } .ds-nav ul a:hover, .ds-nav ul a[aria-current] { color: #fff; } .ds-nav ul a::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: -2px; height: 2px; border-radius: 9999px; background: var(--color-route-300, #9cc0f5); transform: scaleX(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav ul a[aria-current]::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 3px solid var(--color-route-300, #9cc0f5); outline-offset: 3px; } .ds-nav-call { padding: 10px 16px; border-radius: 8px; background: var(--color-route-600, #2563c9); color: #fff; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: background-color 200ms; } .ds-nav-call span { font-weight: 400; color: var(--color-route-100, #dfeafc); font-variant-numeric: tabular-nums; } .ds-nav-call:hover { background: var(--color-route-500, #3b7be0); }"
+    },
+    {
+      "name": "Week Strip",
+      "kind": "custom",
+      "refersTo": "booked-block",
+      "description": "Signature example standing order: seven columns, booked days filled in route blue.",
+      "html": "<figure class=\"ds-week\"><figcaption><span class=\"ds-week-title\">Standing order</span><span class=\"ds-week-tag\">Example</span></figcaption><ol><li><b>Mon</b><span class=\"ds-day ds-booked\"><i></i><i></i></span></li><li><b class=\"ds-off\">Tue</b><span class=\"ds-day\"></span></li><li><b>Wed</b><span class=\"ds-day ds-booked\"><i></i><i></i></span></li><li><b class=\"ds-off\">Thu</b><span class=\"ds-day\"></span></li><li><b>Fri</b><span class=\"ds-day ds-booked\"><i></i><i></i></span></li><li><b class=\"ds-off\">Sat</b><span class=\"ds-day\"></span></li><li><b class=\"ds-off\">Sun</b><span class=\"ds-day\"></span></li></ol></figure>",
+      "css": ".ds-week { width: 21rem; margin: 0; padding: 20px; border-radius: 16px; border: 1px solid rgb(255 255 255 / 0.6); background: rgb(255 255 255 / 0.95); color: var(--color-ink, #0f1e33); box-shadow: var(--shadow-lift, 0 2px 4px rgb(11 31 58 / 0.08), 0 22px 44px -20px rgb(11 31 58 / 0.35)); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-week figcaption { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; } .ds-week-title { font-family: var(--font-display, 'Schibsted Grotesk', sans-serif); font-size: 1.05rem; font-weight: 600; color: var(--color-navy-900, #0b1f3a); } .ds-week-tag { padding: 2px 10px; border-radius: 9999px; background: var(--color-paper-deep, #e6ecf5); color: var(--color-ink-soft, #3d4f68); font-size: 0.75rem; font-weight: 700; } .ds-week ol { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; list-style: none; margin: 0; padding: 0; } .ds-week li { display: flex; flex-direction: column; align-items: center; gap: 6px; } .ds-week b { font-size: 0.72rem; font-weight: 700; color: var(--color-navy-900, #0b1f3a); } .ds-week b.ds-off { color: var(--color-ink-faint, #5a6b82); } .ds-day { display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 64px; padding: 4px; box-sizing: border-box; border-radius: 6px; border: 1px dashed var(--color-rule-strong, #b9c6d8); background: var(--color-paper, #f2f5fa); } .ds-booked { border: 0; background: var(--color-route-600, #2563c9); transform-origin: top; animation: ds-book-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both; } .ds-booked i { display: block; height: 4px; border-radius: 9999px; background: rgb(255 255 255 / 0.85); } .ds-booked i + i { background: rgb(255 255 255 / 0.45); } @keyframes ds-book-in { from { transform: scaleY(0.2); opacity: 0; } to { transform: scaleY(1); opacity: 1; } } @media (prefers-reduced-motion: reduce) { .ds-booked { animation: none; } }"
+    },
+    {
+      "name": "FAQ Item",
+      "kind": "card",
+      "refersTo": "faq-item",
+      "description": "Numbered accordion card; the open header inverts to navy.",
+      "html": "<div class=\"ds-faq ds-faq-open\"><button class=\"ds-faq-head\" aria-expanded=\"true\"><span class=\"ds-faq-n\">3.</span><span class=\"ds-faq-q\">How do I get Fast Track assigned through MAS?</span><span class=\"ds-faq-disc\">+</span></button><div class=\"ds-faq-body\">Call MAS at <b>1-844-666-6270</b> at least three days ahead and ask for Fast Track.</div></div>",
+      "css": ".ds-faq { overflow: hidden; border-radius: 16px; border: 1px solid var(--color-rule, #d3dce9); background: #fff; box-shadow: var(--shadow-card, 0 1px 2px rgb(11 31 58 / 0.06), 0 8px 24px -12px rgb(11 31 58 / 0.18)); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); transition: border-color 300ms, box-shadow 300ms; } .ds-faq-head { display: flex; align-items: flex-start; gap: 16px; width: 100%; padding: 20px 24px; border: 0; background: transparent; color: var(--color-navy-900, #0b1f3a); text-align: left; font-family: var(--font-display, 'Schibsted Grotesk', sans-serif); font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: background-color 200ms; } .ds-faq-head:hover { background: var(--color-paper, #f2f5fa); } .ds-faq-head:focus-visible { outline: 3px solid var(--color-route-500, #3b7be0); outline-offset: -3px; } .ds-faq-n { width: 28px; flex-shrink: 0; font-weight: 700; color: var(--color-route-600, #2563c9); font-variant-numeric: tabular-nums; } .ds-faq-q { flex: 1; } .ds-faq-disc { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 9999px; background: var(--color-paper-deep, #e6ecf5); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-faq-body { padding: 20px 24px 24px 68px; color: var(--color-ink-soft, #3d4f68); font-size: 1.02rem; line-height: 1.7; } .ds-faq-open { border-color: var(--color-route-300, #9cc0f5); box-shadow: var(--shadow-lift, 0 2px 4px rgb(11 31 58 / 0.08), 0 22px 44px -20px rgb(11 31 58 / 0.35)); } .ds-faq-open .ds-faq-head, .ds-faq-open .ds-faq-head:hover { background: var(--color-navy-900, #0b1f3a); color: #fff; } .ds-faq-open .ds-faq-n { color: var(--color-route-300, #9cc0f5); } .ds-faq-open .ds-faq-disc { transform: rotate(45deg); background: rgb(255 255 255 / 0.15); }"
+    },
+    {
+      "name": "Yes / No Choice",
+      "kind": "custom",
+      "refersTo": "choice-yes-selected",
+      "description": "Large radio choice in the ride check; Yes selects to route blue, No to navy.",
+      "html": "<div style=\"display:flex;gap:8px\"><label class=\"ds-choice ds-choice-yes\"><input type=\"radio\" name=\"q\" checked>Yes</label><label class=\"ds-choice\"><input type=\"radio\" name=\"q\">No</label></div>",
+      "css": ".ds-choice { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 80px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--color-rule-strong, #b9c6d8); background: #fff; color: var(--color-navy-900, #0b1f3a); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); font-weight: 700; cursor: pointer; transition: border-color 150ms, background-color 150ms; } .ds-choice input { position: absolute; opacity: 0; width: 1px; height: 1px; } .ds-choice:hover { border-color: var(--color-route-500, #3b7be0); } .ds-choice:has(:focus-visible) { outline: 3px solid var(--color-route-500, #3b7be0); outline-offset: 2px; } .ds-choice-yes { border-color: var(--color-route-600, #2563c9); background: var(--color-route-600, #2563c9); color: #fff; } .ds-choice-no { border-color: var(--color-navy-900, #0b1f3a); background: var(--color-navy-900, #0b1f3a); color: #fff; }"
+    },
+    {
+      "name": "Notice",
+      "kind": "card",
+      "refersTo": "notice-alert",
+      "description": "Inline notices: route-100 info, Clay Alert for emergencies and errors.",
+      "html": "<div class=\"ds-notice ds-notice-alert\"><strong>For a life-threatening emergency, call 911.</strong><p>Fast Track is not an ambulance service.</p></div><div class=\"ds-notice\" style=\"margin-top:12px\"><strong>Not every trip is automatically covered by Medicaid.</strong><p>Subject to eligibility, authorization, assignment, and availability.</p></div>",
+      "css": ".ds-notice { padding: 20px; border-radius: 16px; border: 1px solid var(--color-route-100, #dfeafc); background: rgb(223 234 252 / 0.6); color: var(--color-navy-900, #0b1f3a); font-family: var(--font-sans, 'Atkinson Hyperlegible Next', sans-serif); } .ds-notice strong { display: block; font-family: var(--font-display, 'Schibsted Grotesk', sans-serif); font-size: 1.125rem; font-weight: 600; } .ds-notice p { margin: 4px 0 0; } .ds-notice-alert { border-color: #f3d4bf; background: var(--color-alert-bg, #fff4ec); color: #5b2410; } .ds-notice-alert strong { color: var(--color-alert, #9a3412); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Standing Week",
+    "overview": "The system is a rider's weekly planner rendered in navy ink and blue-gray paper. Recurring care (dialysis three mornings a week, physical therapy twice) is the organizing frame, so the world's native material is the seven-day column: faint hairline day rules run behind paper sections and navy sections alike, and filled medium-blue blocks mean \"a ride is booked.\" Everything else is quiet so that those blocks, and the phone number, read first.\n\nDensity is calm and generous: large Atkinson Hyperlegible Next body type (17px base, 1.65 leading) for older readers on phones, big tap targets (48px choices, 56px primary calls), and sections that breathe at 80px on mobile and 112px on desktop. Navy owns the opening, the \"how it works\" band, and the close; paper and white carry the explanatory middle. Depth is soft and navy-tinted, never hard.\n\nThe phone line is the single live channel and is always on screen: a persistent call button in the sticky navy header on desktop and a fixed navy call bar on phones.",
+    "keyCharacteristics": [
+      "Seven-day column rules as ground texture on both paper and navy.",
+      "Medium blue reserved for actions and booked-ride blocks.",
+      "Tabular figures for every phone number, count, step number, and day.",
+      "Soft, navy-tinted two-layer shadows; 6px to 24px corners scaled to element size.",
+      "Navy bookends (hero, process band, contact, footer) around a paper middle."
+    ],
+    "rules": [
+      { "name": "The Booked Means Blue Rule", "body": "Standing-Order Blue fills only two things: something you press, and a day that has a ride. Never use it for decoration, section grounds, or icons in tiles.", "section": "colors" },
+      { "name": "The Red Stays in the Logo Rule", "body": "The supplied logo's red appears nowhere else. The only warm hue in the interface is Clay Alert, and it appears only for emergencies and errors.", "section": "colors" },
+      { "name": "The Tabular Clock Rule", "body": "Every phone number, count, step number, question number, and day uses tabular figures. Phone numbers never wrap.", "section": "typography" },
+      { "name": "The Sentence-Case Label Rule", "body": "Labels are bold sentence case in the body face. Small text is made distinct by weight and color, not by uppercase tracking.", "section": "typography" },
+      { "name": "The Seven Columns Rule", "body": "Any calendar-like element divides into exactly seven equal columns, Monday first. Examples are always labeled as examples, never as a schedule.", "section": "layout" },
+      { "name": "The Soft Offset Rule", "body": "Shadows are blurred, navy-tinted, and negatively spread. No hard, zero-blur offsets.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the main office number visible at every scroll position: header call button at 1024px and up, fixed bottom call bar below.",
+      "Do draw day-column rules at `100% / 7` behind planner sections (rule-strong at 38% on paper, route-300 at 8% on navy).",
+      "Do use route-600 only for actions and booked-ride blocks, and set every number in tabular figures.",
+      "Do use the Card and Lift shadows as specified; tonal layering first, shadow second.",
+      "Do keep tap targets at 44px or more (48px for choices, about 56px for primary calls) and body text at 17px or larger.",
+      "Do label any illustrative week as an example."
+    ],
+    "donts": [
+      "Don't use the logo's red, or any warm hue other than Clay Alert, anywhere in the interface.",
+      "Don't put uppercase tracked kickers or eyebrows above headings; headings stand on their own.",
+      "Don't use hard, zero-blur offset shadows.",
+      "Don't fill decorative shapes, section grounds, or icon tiles with route-600.",
+      "Don't divide a calendar element into anything but seven columns, Monday first."
+    ]
+  }
+}
