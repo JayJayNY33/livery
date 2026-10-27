@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, Phone, Star } from 'lucide-react'
+import { ArrowDown, ArrowRight, MessageSquarePlus, Phone } from 'lucide-react'
 import { PHONES } from '../data/site'
 
 export function Hero() {
@@ -13,7 +13,7 @@ export function Hero() {
             className="order-1 text-[clamp(2.6rem,5.6vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
           >
             Reliable Transportation.{' '}
-            <span className="text-route-300">Drivers Who Treat You Like Family.</span>
+            <span className="text-route-300">Courteous Drivers. Comfortable Rides.</span>
           </h1>
           <p className="order-3 mt-6 max-w-[34rem] text-title-sm leading-relaxed text-route-100/90 sm:text-lead">
             Rides to doctor visits, dialysis, and therapy across Long Island, with a team that cares about every client.
@@ -48,40 +48,31 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[30rem] lg:max-w-none">
+        <div className="relative mx-auto flex w-full max-w-[34rem] flex-col justify-center lg:max-w-none">
           <div className="relative overflow-hidden rounded-[1.25rem] shadow-[0_40px_80px_-40px_rgb(0_0_0/0.7)] ring-1 ring-white/10">
             <img
               src="/images/hero-960.webp"
               srcSet="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1280.webp 1280w"
               sizes="(min-width: 1024px) 40vw, 92vw"
               width={1280}
-              height={1600}
-              alt="An older man in a navy vest steps into the back seat of a dark sedan on a tree-lined street"
-              className="aspect-[4/5] w-full object-cover object-[60%_center]"
+              height={1010}
+              alt="A helper holds a passenger's hands to steady them as they step out of a car"
+              className="aspect-[5/4] w-full object-cover"
               {...{ fetchpriority: "high" }}
             />
             <div
               className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-950/55 to-transparent"
               aria-hidden="true"
             />
-            <a
-              href="/reviews#write"
-              className="group absolute right-3 top-3 flex flex-col items-start gap-1.5 rounded-2xl bg-white/95 px-4 py-3 text-navy-900 shadow-lift backdrop-blur-sm transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 sm:right-4 sm:top-4 sm:px-5 sm:py-4"
-            >
-              <span className="inline-flex gap-0.5" aria-hidden="true">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} className="size-5 fill-sun-500 text-sun-500 sm:size-6" strokeWidth={1.5} />
-                ))}
-              </span>
-              <span className="inline-flex items-center gap-2 font-display text-[clamp(1.3rem,2.4vw,1.75rem)] font-bold leading-none tracking-[-0.02em]">
-                Write a review
-                <ArrowRight
-                  aria-hidden="true"
-                  className="size-6 text-route-600 transition-transform duration-300 ease-out-expo group-hover:translate-x-1"
-                />
-              </span>
-            </a>
           </div>
+          <a
+            href="/reviews#write"
+            className="group mt-5 inline-flex min-h-11 items-center gap-3 self-start rounded-xl border border-white/25 px-5 py-3 font-display text-title font-semibold text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/5 lg:self-end"
+          >
+            <MessageSquarePlus aria-hidden="true" className="size-6 text-route-300" strokeWidth={2} />
+            Leave us a review
+            <ArrowRight aria-hidden="true" className="size-5 transition-transform duration-300 ease-out-expo group-hover:translate-x-1" />
+          </a>
         </div>
       </div>
     </section>
