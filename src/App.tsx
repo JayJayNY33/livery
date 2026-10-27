@@ -1,4 +1,4 @@
-import { About } from './components/About'
+import { GoodToKnow } from './components/GoodToKnow'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
@@ -16,7 +16,7 @@ export default function App() {
         <Hero />
         <Services />
         <WhyChoose />
-        <About />
+        <GoodToKnow />
         <HowItWorks />
         <Contact />
       </main>

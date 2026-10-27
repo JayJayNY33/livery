@@ -26,7 +26,7 @@ const REASONS: { title: string; body: string; icon: LucideIcon }[] = [
 
 export function WhyChoose() {
   return (
-    <section aria-labelledby="why-title" className="bg-white py-20 sm:py-28">
+    <section id="about" aria-labelledby="why-title" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
@@ -64,7 +64,7 @@ export function WhyChoose() {
           <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
             {REASONS.map(({ title, body, icon: Icon }) => (
               <li key={title} className="flex gap-4 border-t border-rule py-6">
-                <Icon aria-hidden="true" className="mt-1 size-6 shrink-0 text-sun-600" strokeWidth={1.9} />
+                <Icon aria-hidden="true" className="mt-1 size-6 shrink-0 text-brand-red" strokeWidth={1.9} />
                 <div>
                   <h3 className="text-lg font-semibold leading-snug text-navy-900">{title}</h3>
                   <p className="mt-1.5 text-ink-soft">{body}</p>
