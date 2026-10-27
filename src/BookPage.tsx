@@ -1,7 +1,6 @@
 import { CalendarClock, Car, FileCheck2, Phone } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { BookingForm } from './components/BookingForm'
-import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { MobileCallBar } from './components/MobileCallBar'
@@ -70,11 +69,17 @@ export default function BookPage() {
                   or {PHONES.secondary.display}
                 </a>
               </div>
+              <p className="mt-4 rounded-2xl border border-rule bg-white px-5 py-4 text-navy-900">
+                <strong>Medical emergency?</strong> Call{' '}
+                <a href="tel:911" className="font-bold text-alert underline">
+                  911
+                </a>
+                . We are not an ambulance.
+              </p>
             </aside>
           </div>
         </section>
 
-        <Contact showBooking={false} />
       </main>
       <Footer />
       <MobileCallBar />

@@ -39,13 +39,13 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="order-5 mt-6 text-small text-route-100/75">
-            Medicaid rides are arranged through MAS at{' '}
-            <a href={PHONES.mas.href} className="tabular font-bold text-white underline decoration-route-300/60">
-              {PHONES.mas.display}
-            </a>
-            . Ask for Fast Track.
-          </p>
+          <a
+            href="#how-it-works"
+            className="order-5 mt-5 inline-flex min-h-11 items-center gap-2 self-start font-bold text-route-100 underline decoration-route-300/50 underline-offset-4 hover:text-white"
+          >
+            Using Medicaid? See how it works
+            <ArrowDown aria-hidden="true" className="size-4" />
+          </a>
         </div>
 
         <div className="relative mx-auto flex w-full max-w-[34rem] flex-col justify-center lg:max-w-none">

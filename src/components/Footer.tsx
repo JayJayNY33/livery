@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <h2 className="font-display text-base font-semibold text-white">Contact</h2>
             <dl className="mt-4 grid gap-1 text-body">
-              {[PHONES.main, PHONES.secondary, ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL }] : []), PHONES.mas].map((p) => (
+              {[PHONES.main, ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL }] : [])].map((p) => (
                 <div key={p.label}>
                   <dt className="text-small text-route-100/65">{p.label}</dt>
                   <dd>

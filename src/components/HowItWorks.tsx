@@ -54,28 +54,27 @@ export function HowItWorks() {
           </a>
         </div>
 
-        <ol className="relative mt-14 grid gap-4 lg:grid-cols-3 lg:gap-6">
-          <span
-            className="absolute left-[calc(16.66%)] right-[calc(16.66%)] top-[2.15rem] hidden h-px bg-gradient-to-r from-route-300/0 via-route-300/50 to-route-300/0 lg:block"
-            aria-hidden="true"
-          />
+        <ol className="mt-14 grid gap-10 lg:grid-cols-3 lg:gap-8">
           {STEPS.map((step, i) => (
-            <li key={step.title} className="relative flex flex-col rounded-2xl border border-white/10 bg-navy-800/70 p-6 sm:p-7">
-              <span
-                className="tabular relative z-10 mb-6 inline-flex size-11 items-center justify-center self-start rounded-full bg-white font-display text-lg font-bold text-navy-900 lg:self-center"
-                aria-hidden="true"
-              >
-                {i + 1}
-              </span>
-              <h3 className="text-title font-semibold lg:text-center">
+            <li key={step.title} className="relative pl-16 lg:pl-0">
+              {i < STEPS.length - 1 && (
+                <span className="absolute bottom-[-2.5rem] left-6 top-14 w-px bg-route-300/40 lg:hidden" aria-hidden="true" />
+              )}
+              <div className="absolute left-0 top-0 lg:static lg:mb-6 lg:flex lg:items-center lg:gap-4" aria-hidden="true">
+                <span className="tabular flex size-12 shrink-0 items-center justify-center rounded-full border-2 border-route-300 font-display text-xl font-bold text-white">
+                  {i + 1}
+                </span>
+                {i < STEPS.length - 1 && <span className="hidden h-px flex-1 bg-route-300/40 lg:block" />}
+              </div>
+              <h3 className="pt-2.5 text-title font-semibold lg:pt-0">
                 <span className="sr-only">Step {i + 1}: </span>
                 {step.title}
               </h3>
-              <p className="mt-2 text-route-100/85 lg:text-center">{step.body}</p>
+              <p className="mt-2 max-w-[34ch] text-route-100/85">{step.body}</p>
               {step.action && (
                 <a
                   href={step.action.phone.href}
-                  className="mt-4 inline-flex min-h-11 items-center gap-2 self-start font-bold text-route-300 underline decoration-route-300/40 underline-offset-4 hover:text-white lg:self-center"
+                  className="mt-3 inline-flex min-h-11 items-center gap-2 font-bold text-route-300 underline decoration-route-300/40 underline-offset-4 hover:text-white"
                 >
                   {step.action.label}: <span className="tabular">{step.action.phone.display}</span>
                 </a>
@@ -84,7 +83,7 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-6 max-w-[52ch] text-small text-route-100/75">
+        <p className="mt-12 max-w-[52ch] text-small text-route-100/75">
           Provider selection and transportation are subject to MAS authorization, assignment, and availability. For
           regular appointments, contact MAS at least three (3) days ahead.
         </p>
