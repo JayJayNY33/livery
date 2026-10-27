@@ -83,14 +83,11 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
           aria-label="Medical emergency"
           className="mt-6 flex flex-col gap-5 rounded-2xl border-2 border-white/25 bg-white/[0.06] px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8"
         >
-          <div className="flex items-start gap-4">
-            <Siren aria-hidden="true" className="mt-1 size-9 shrink-0 text-white" strokeWidth={2} />
-            <div>
-              <p className="font-display text-[clamp(1.5rem,3vw,2.1rem)] font-bold leading-tight">
-                Medical emergency? Call 911.
-              </p>
-              <p className="mt-1 text-lg font-bold text-white/90">Fast Track is not an ambulance service.</p>
-            </div>
+          <div>
+            <p className="font-display text-[clamp(1.5rem,3vw,2.1rem)] font-bold leading-tight">
+              Medical emergency? Call 911.
+            </p>
+            <p className="mt-1 text-lg font-bold text-white/90">Fast Track is not an ambulance service.</p>
           </div>
           <a
             href={EMERGENCY.href}
