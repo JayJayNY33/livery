@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import { ChevronsDownUp, ChevronsUpDown, Plus } from 'lucide-react'
 import { FAQS, FAQ_CATEGORIES } from '../data/faqs'
@@ -20,6 +20,34 @@ export function Faq() {
       else next.add(n)
       return next
     })
+
+  // Links elsewhere on the page (href="#faq-q-9") open their answer, not just scroll to it.
+  useEffect(() => {
+    const openFromHash = (hash: string) => {
+      const n = Number(hash.match(/^#faq-q-(\d+)$/)?.[1])
+      if (!n) return false
+      setFilter('all')
+      setOpen((prev) => new Set(prev).add(n))
+      requestAnimationFrame(() => {
+        const btn = document.getElementById(`faq-q-${n}`)
+        btn?.scrollIntoView({ block: 'start' })
+        btn?.focus({ preventScroll: true })
+      })
+      return true
+    }
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest?.('a[href^="#faq-q-"]')
+      if (!link) return
+      const hash = link.getAttribute('href') ?? ''
+      if (openFromHash(hash)) {
+        e.preventDefault()
+        history.replaceState(null, '', hash)
+      }
+    }
+    openFromHash(window.location.hash)
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [])
 
   const setAll = (expand: boolean) =>
     setOpen((prev) => {

@@ -82,7 +82,7 @@ function WeekRow({ pattern }: { pattern: Pattern }) {
                 ? 'bg-route-300/70'
                 : cell === 'c'
                   ? 'border-2 border-route-600 bg-white text-route-600'
-                  : 'border border-dashed border-rule-strong/80'
+                  : 'bg-paper-deep/70'
           }`}
         >
           {cell === 'r' && <span className="h-1 w-3/5 rounded-full bg-white/85" aria-hidden="true" />}
@@ -142,7 +142,7 @@ export function Services() {
               {SERVICES.map(({ title, body, rhythm, pattern, icon: Icon }) => (
                 <li
                   key={title}
-                  className="grid gap-5 px-5 py-6 transition-colors duration-200 hover:bg-paper/60 sm:px-7 md:grid-cols-[1fr_17rem] md:items-center md:gap-8"
+                  className="grid gap-5 px-5 py-6 sm:px-7 md:grid-cols-[1fr_17rem] md:items-center md:gap-8"
                 >
                   <div className="flex gap-4">
                     <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-route-300">
