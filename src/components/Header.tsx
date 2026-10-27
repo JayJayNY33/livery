@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { Menu, Phone, X } from 'lucide-react'
-import { NAV_LINKS, PHONES, sectionHref } from '../data/site'
+import { CalendarPlus, Menu, Phone, X } from 'lucide-react'
+import { BOOK_HREF, NAV_LINKS, PHONES, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
-/** '/faq' or '/reviews' when on one of those pages, otherwise null (the home page). */
+/** The page path ('/faq', '/reviews', '/book') on any page except home, where it is null. */
 function currentPage() {
-  const path = window.location.pathname.replace(/\.html$/, '')
-  return NAV_LINKS.some((l) => l.href === path) ? path : null
+  const path = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '')
+  return path === '' || path === '/index' ? null : path
 }
 
 function useActiveSection() {
@@ -62,13 +62,13 @@ export function Header() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 xl:gap-6 px-4 sm:px-6 lg:px-8">
         <a href={sectionHref('#home')} className="shrink-0" aria-label="Fast Track Medical & Livery Transportation, back to top">
           <Logo className="h-12 w-auto sm:h-[3.4rem]" />
         </a>
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 xl:gap-1">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.href
               return (
@@ -76,14 +76,14 @@ export function Header() {
                   <a
                     href={sectionHref(link.href)}
                     aria-current={isActive ? 'location' : undefined}
-                    className={`relative rounded-md px-3 py-2 text-[0.95rem] font-medium transition-colors duration-200 ${
-                      isActive ? 'text-white' : 'text-route-100/75 hover:text-white'
+                    className={`relative rounded-md px-2.5 py-2 text-[0.95rem] xl:px-3 font-medium transition-colors duration-200 ${
+                      isActive ? 'text-brand-red-light' : 'text-brand-red-light/85 hover:text-brand-red-light'
                     }`}
                   >
                     {link.label}
                     <span
                       aria-hidden="true"
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-route-300 transition-transform duration-300 ease-out-expo ${
+                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-red-light transition-transform duration-300 ease-out-expo ${
                         isActive ? 'scale-x-100' : 'scale-x-0'
                       }`}
                     />
@@ -102,8 +102,17 @@ export function Header() {
             <Phone aria-hidden="true" className="size-4" strokeWidth={2.4} />
             <span className="sm:hidden">Call</span>
             <span className="hidden sm:inline">
-              Call Us <span className="tabular font-normal text-route-100">{PHONES.main.display}</span>
+              Call Us <span className="tabular hidden font-normal text-route-100 xl:inline">{PHONES.main.display}</span>
             </span>
+          </a>
+          <a
+            href={BOOK_HREF}
+            aria-current={active === BOOK_HREF ? 'page' : undefined}
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-[0.95rem] font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
+          >
+            <CalendarPlus aria-hidden="true" className="hidden size-4 sm:block" strokeWidth={2.4} />
+            <span className="sm:hidden">Book</span>
+            <span className="hidden sm:inline">Book a Trip</span>
           </a>
           <button
             ref={toggleRef}
@@ -133,15 +142,21 @@ export function Header() {
                   href={sectionHref(link.href)}
                   onClick={() => setOpen(false)}
                   aria-current={active === link.href ? 'location' : undefined}
-                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-white"
+                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-brand-red-light"
                 >
                   {link.label}
-                  {active === link.href && <span className="size-2 rounded-full bg-route-300" aria-hidden="true" />}
+                  {active === link.href && <span className="size-2 rounded-full bg-brand-red-light" aria-hidden="true" />}
                 </a>
               </li>
             ))}
           </ul>
           <div className="mt-8 grid gap-3">
+            <a
+              href={BOOK_HREF}
+              className="flex items-center justify-center gap-3 rounded-xl bg-brand-red px-5 py-4 text-lg font-bold text-white"
+            >
+              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Trip
+            </a>
             <a
               href={PHONES.main.href}
               className="flex items-center justify-center gap-3 rounded-xl bg-route-600 px-5 py-4 text-lg font-bold text-white"

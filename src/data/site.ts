@@ -26,6 +26,8 @@ export const EMERGENCY = { display: '911', href: 'tel:911' }
 /** Google "write a review" link for the business profile. Null until the profile is set up. */
 export const GOOGLE_REVIEW_URL: string | null = null
 
+export const BOOK_HREF = '/book'
+
 export const EMAIL = 'fasttrackcarservice2020@gmail.com'
 export const EMAIL_HREF = `mailto:${EMAIL}`
 

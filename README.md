@@ -33,17 +33,17 @@ src/
   index.css             design tokens (@theme), base styles, FAQ answer styles
   data/site.ts          business name, phone numbers, email, navigation (edit contacts here)
   data/faqs.tsx         the 15 FAQs, verbatim from Fast_Track_Deep_Blue_Interactive_FAQ.html
-  lib/contact.ts        form validation, optional submission, mailto fallback
-  components/           Header, Hero, WeekStrip, Services, WhyChoose, About,
-                        HowItWorks, RideCheck, Faq, Contact, ContactForm,
-                        Footer, MobileCallBar, Logo, PhoneLink
+  lib/booking.ts        Book a Trip form: checks, email fallback, optional sending
+  components/           Header, Hero, Services, HowItWorks, RideCheck, WhyChoose, GoodToKnow,
+                        Contact, Faq, BookingForm, ReviewForm, Footer, MobileCallBar,
+                        Logo, PhoneLink
 ```
 
-## Contact form
+## Book a Trip form
 
-The form validates input but **does not send anything** until a backend is connected. Until then, a valid submission tells the visitor that the message was not sent. It then offers the phone number and a pre-filled email to fasttrackcarservice2020@gmail.com.
+The Book a Trip page (`book.html`, at `/book`) collects the trip details and checks them. By default it opens the visitor's email app with the request filled in, addressed to fasttrackcarservice2020@gmail.com. Nothing is sent from the page itself, and the page says that a request is not a confirmed booking.
 
-To connect it, set `VITE_CONTACT_ENDPOINT` to any HTTPS endpoint that accepts a JSON POST of `{ name, phone, email, message }`. A Formspree form URL works, as does your own serverless function. See `.env.example`.
+To have requests sent directly instead, set `VITE_CONTACT_ENDPOINT` to any HTTPS endpoint that accepts a JSON POST, such as a Formspree form URL. See `.env.example`.
 
 ## Before launch
 
@@ -61,4 +61,4 @@ All in `src/data/`:
 - **Google review link:** in `site.ts`, set `GOOGLE_REVIEW_URL` once the Google Business Profile is set up. A "Review us on Google" button then appears on the Reviews page.
 - **Reviews:** add real reviews, posted with the client's permission, to `REVIEWS` in `reviews.ts`. Until there are any, the Reviews page shows "Be one of our first reviewers".
 
-The site has three pages: home (`index.html`), the FAQ (`faq.html`, at `/faq`) and Reviews (`reviews.html`, at `/reviews`). `vercel.json` turns on clean URLs. Reviews submitted through its form open the visitor's email app, addressed to the office.
+The site has four pages: home (`index.html`), the FAQ (`faq.html`, at `/faq`), Reviews (`reviews.html`, at `/reviews`) and Book a Trip (`book.html`, at `/book`). `vercel.json` turns on clean URLs. Reviews submitted through its form open the visitor's email app, addressed to the office.

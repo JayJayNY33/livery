@@ -40,6 +40,9 @@
 
   /* Logo red: thin brand lines only, never buttons */
   --color-brand-red: #c8102e;
+  --color-brand-red-dark: #a50d26;
+  /* Lighter logo red for text on navy (readable at 4.5:1 and up) */
+  --color-brand-red-light: #ff8080;
 
   /* Notices */
   --color-alert: #9a3412;
