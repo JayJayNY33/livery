@@ -4,22 +4,22 @@ import { AlertTriangle, CheckCircle2, RotateCcw } from 'lucide-react'
 import { PHONES } from '../data/site'
 
 type Answer = 'yes' | 'no'
-type QuestionId = 'nonEmergency' | 'carSeat' | 'threeDays'
+type QuestionId = 'medical' | 'getIn' | 'threeDays'
 
 const QUESTIONS: { id: QuestionId; label: string; hint: string }[] = [
   {
-    id: 'nonEmergency',
-    label: 'Is this a non-emergency trip to a medical appointment?',
-    hint: 'Doctors, specialists, hospitals, dialysis, therapy and rehabilitation.',
+    id: 'medical',
+    label: 'Is the ride for a medical appointment?',
+    hint: 'Doctor, specialist, hospital, dialysis, therapy or rehabilitation.',
   },
   {
-    id: 'carSeat',
-    label: 'Can the passenger ride in a regular car seat?',
-    hint: 'Our sedans are not wheelchair accessible. Passengers cannot remain seated in a wheelchair.',
+    id: 'getIn',
+    label: 'Can the passenger get in and out of a regular car on their own or with a little help?',
+    hint: 'Our cars are standard sedans. Passengers can’t stay seated in a wheelchair.',
   },
   {
     id: 'threeDays',
-    label: 'Is the appointment at least three days away?',
+    label: 'Is the appointment at least 3 days away?',
     hint: 'Regular rides should be arranged with MAS at least three days ahead.',
   },
 ]
@@ -61,19 +61,26 @@ export function RideCheck() {
             Is Fast Track right for my ride?
           </h2>
           <p className="mt-2 text-ink-soft">Three quick questions. Your next step appears when all three are answered.</p>
+          <p className="mt-3 text-body font-bold text-navy-900">
+            For a medical emergency, call{' '}
+            <a href="tel:911" className="text-alert underline">
+              911
+            </a>{' '}
+            now. We are not an ambulance.
+          </p>
         </div>
         <p className="tabular text-small font-bold text-ink-faint" aria-hidden="true">
           {answered} of {QUESTIONS.length} answered
         </p>
       </div>
 
-      <div className="mt-7 grid gap-3">
+      <div className="mt-7 divide-y divide-rule border-y border-rule">
         {QUESTIONS.map((q, i) => {
           const value = answers[q.id]
           return (
             <fieldset
               key={q.id}
-              className="grid gap-4 rounded-2xl border border-rule bg-paper p-4 sm:grid-cols-[1fr_auto] sm:items-center sm:p-5"
+              className="grid gap-4 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-8"
             >
               <legend className="sr-only">{q.label}</legend>
               <div aria-hidden="true">
@@ -127,30 +134,31 @@ export function RideCheck() {
           <div className="grid gap-3">
             {allYes ? (
               <div className="flex gap-4 rounded-2xl bg-route-100/70 p-5 text-navy-900">
-                <CheckCircle2 aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-sun-600" />
+                <CheckCircle2 aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-route-700" />
                 <div>
                   <p className="font-display text-lg font-semibold">Fast Track may be a good fit for this ride.</p>
-                  <p className="mt-1">
-                    For a Medicaid trip, call MAS at {mas} and ask whether Fast Track can be assigned as your
-                    preferred provider. Then call our office at {office} to confirm pickup details. Assignment is
-                    subject to MAS requirements and availability.
-                  </p>
+                  <ul className="mt-2 grid gap-2">
+                    <li>
+                      <strong>Using Medicaid?</strong> Call MAS at {mas} and ask for Fast Track as your preferred
+                      provider, then call us at {office} to confirm pickup. Assignment is subject to MAS requirements
+                      and availability.
+                    </li>
+                    <li>
+                      <strong>Not using Medicaid?</strong> Call our office at {office} to ask about your ride.
+                    </li>
+                  </ul>
                 </div>
               </div>
             ) : (
               <>
-                {answers.nonEmergency === 'no' && (
-                  <Notice tone="alert" title="For a life-threatening emergency, call 911.">
-                    Fast Track is not an ambulance service.{' '}
-                    <a href="tel:911" className="font-bold underline">
-                      Call 911
-                    </a>
+                {answers.medical === 'no' && (
+                  <Notice title="We only provide rides to medical appointments.">
+                    Not sure if your trip counts? Call us at {office}.
                   </Notice>
                 )}
-                {answers.carSeat === 'no' && (
-                  <Notice title="Our sedans are not wheelchair accessible.">
-                    Patients who must remain seated in a wheelchair should request wheelchair-accessible transportation
-                    through MAS at {mas}.
+                {answers.getIn === 'no' && (
+                  <Notice title="Our sedans aren’t wheelchair accessible.">
+                    Ask MAS for wheelchair-accessible transportation at {mas}.
                   </Notice>
                 )}
                 {answers.threeDays === 'no' && (
@@ -161,7 +169,7 @@ export function RideCheck() {
                 )}
               </>
             )}
-            {answers.carSeat === 'yes' && (
+            {answers.getIn === 'yes' && (
               <p className="text-small text-ink-soft">
                 Bringing a folding wheelchair or walker? We may be able to carry one that fits securely in the trunk.
                 Please confirm with us in advance.
@@ -181,25 +189,10 @@ export function RideCheck() {
   )
 }
 
-function Notice({
-  title,
-  children,
-  tone = 'info',
-}: {
-  title: string
-  children: ReactNode
-  tone?: 'info' | 'alert'
-}) {
+function Notice({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div
-      className={`flex gap-4 rounded-2xl p-5 ${
-        tone === 'alert' ? 'border border-[#f3d4bf] bg-alert-bg text-[#5b2410]' : 'bg-paper-deep text-navy-900'
-      }`}
-    >
-      <AlertTriangle
-        aria-hidden="true"
-        className={`mt-0.5 size-6 shrink-0 ${tone === 'alert' ? 'text-alert' : 'text-route-700'}`}
-      />
+    <div className="flex gap-4 rounded-2xl bg-paper-deep p-5 text-navy-900">
+      <AlertTriangle aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-route-700" />
       <div>
         <p className="font-display text-lg font-semibold">{title}</p>
         <p className="mt-1">{children}</p>
