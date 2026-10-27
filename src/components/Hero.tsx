@@ -1,6 +1,5 @@
 import { ArrowDown, ArrowRight, Phone, Star } from 'lucide-react'
 import { PHONES } from '../data/site'
-import { WeekStrip } from './WeekStrip'
 
 export function Hero() {
   return (
@@ -84,7 +83,6 @@ export function Hero() {
               </span>
             </a>
           </div>
-          <WeekStrip className="relative -mt-24 mx-3 sm:absolute sm:-bottom-8 sm:-left-10 sm:mx-0 sm:mt-0 sm:w-[21rem]" />
         </div>
       </div>
     </section>
