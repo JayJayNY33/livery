@@ -13,11 +13,10 @@ export function Hero() {
             className="order-1 text-[clamp(2.6rem,6.2vw,5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
           >
             Reliable Transportation.{' '}
-            <span className="text-route-300">Compassionate Care.</span>
+            <span className="text-route-300">Drivers Who Treat You Like Family.</span>
           </h1>
           <p className="order-3 mt-6 max-w-[34rem] text-lg leading-relaxed text-route-100/90 sm:text-xl">
-            Getting to your medical appointments should be one less thing to worry about. Fast Track provides
-            dependable non-emergency medical transportation throughout our approved Long Island service areas.
+            Rides to doctor visits, dialysis, and therapy across Long Island, with a team that cares about every client.
           </p>
 
           <div className="order-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
