@@ -17,16 +17,16 @@ export function Footer() {
 
           <nav aria-label="Footer">
             <h2 className="font-display text-base font-semibold text-white">Explore</h2>
-            <ul className="mt-4 grid gap-2.5">
+            <ul className="mt-2 grid">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={sectionHref(l.href)} className="hover:text-white hover:underline">
+                  <a href={sectionHref(l.href)} className="inline-flex min-h-11 items-center hover:text-white hover:underline">
                     {l.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href={BOOK_HREF} className="hover:text-white hover:underline">
+                <a href={BOOK_HREF} className="inline-flex min-h-11 items-center hover:text-white hover:underline">
                   Book a Ride
                 </a>
               </li>
@@ -35,12 +35,12 @@ export function Footer() {
 
           <div>
             <h2 className="font-display text-base font-semibold text-white">Contact</h2>
-            <dl className="mt-4 grid gap-3 text-body">
+            <dl className="mt-4 grid gap-1 text-body">
               {[PHONES.main, PHONES.secondary, ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL }] : []), PHONES.mas].map((p) => (
                 <div key={p.label}>
                   <dt className="text-small text-route-100/65">{p.label}</dt>
                   <dd>
-                    <a href={p.href} className="tabular font-bold text-white hover:underline">
+                    <a href={p.href} className="tabular inline-flex min-h-11 items-center font-bold text-white hover:underline">
                       {p.display}
                     </a>
                   </dd>
@@ -49,7 +49,7 @@ export function Footer() {
               <div>
                 <dt className="text-small text-route-100/65">Email</dt>
                 <dd>
-                  <a href={EMAIL_HREF} className="break-all font-bold text-white hover:underline">
+                  <a href={EMAIL_HREF} className="inline-flex min-h-11 items-center break-all font-bold text-white hover:underline">
                     {EMAIL}
                   </a>
                 </dd>
@@ -57,7 +57,7 @@ export function Footer() {
               <div>
                 <dt className="text-small text-route-100/65">Medical emergency</dt>
                 <dd>
-                  <a href={EMERGENCY.href} className="font-bold text-white hover:underline">
+                  <a href={EMERGENCY.href} className="inline-flex min-h-11 items-center font-bold text-white hover:underline">
                     Call {EMERGENCY.display}
                   </a>
                 </dd>

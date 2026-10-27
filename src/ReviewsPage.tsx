@@ -121,7 +121,7 @@ export default function ReviewsPage() {
               </p>
               <a
                 href={PHONES.main.href}
-                className="mt-6 inline-flex items-center gap-3 font-display text-2xl font-semibold text-white underline decoration-route-300/60 underline-offset-4"
+                className="mt-6 inline-flex min-h-11 items-center gap-3 font-display text-2xl font-semibold text-white underline decoration-route-300/60 underline-offset-4"
               >
                 <Phone aria-hidden="true" className="size-6" />
                 <span className="tabular">{PHONES.main.display}</span>

@@ -8,6 +8,7 @@ import { PHONES } from '../data/site'
 /** The full FAQ. On its own page (asPage) the heading is the page's h1. */
 export function Faq({ asPage = false }: { asPage?: boolean }) {
   const Heading = asPage ? 'h1' : 'h2'
+  const QuestionHeading = asPage ? 'h2' : 'h3'
   const [filter, setFilter] = useState<FaqCategory | 'all'>('all')
   const [open, setOpen] = useState<Set<number>>(() => new Set([1]))
   const buttons = useRef<Map<number, HTMLButtonElement>>(new Map())
@@ -85,7 +86,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
             <p className="mt-1 text-body text-ink-soft">Our office is happy to help.</p>
             <a
               href={PHONES.main.href}
-              className="tabular mt-3 inline-flex font-display text-2xl font-semibold text-route-700 underline decoration-route-300 underline-offset-4 hover:text-navy-900"
+              className="tabular mt-2 inline-flex min-h-11 items-center font-display text-2xl font-semibold text-route-700 underline decoration-route-300 underline-offset-4 hover:text-navy-900"
             >
               {PHONES.main.display}
             </a>
@@ -104,7 +105,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setFilter(c.id)}
-                    className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-4 text-small font-bold transition-colors duration-150 ${
+                    className={`inline-flex min-h-11 items-center gap-2 rounded-full border px-4 text-small font-bold transition-colors duration-150 ${
                       active
                         ? 'border-navy-900 bg-navy-900 text-white'
                         : 'border-rule-strong bg-white text-navy-900 hover:border-route-500'
@@ -119,7 +120,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
             <button
               type="button"
               onClick={() => setAll(!allOpen)}
-              className="inline-flex min-h-10 shrink-0 items-center gap-2 self-start rounded-lg px-2 text-small font-bold text-route-700 hover:text-navy-900 sm:self-auto"
+              className="inline-flex min-h-11 shrink-0 items-center gap-2 self-start rounded-lg px-2 text-small font-bold text-route-700 hover:text-navy-900 sm:self-auto"
             >
               {allOpen ? (
                 <ChevronsDownUp aria-hidden="true" className="size-4" />
@@ -146,7 +147,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                     isOpen ? 'border-route-300 shadow-lift' : 'border-rule shadow-card hover:border-rule-strong'
                   }`}
                 >
-                  <h3 className="text-title-sm font-semibold sm:text-title">
+                  <QuestionHeading className="text-title-sm font-semibold sm:text-title">
                     <button
                       ref={(el) => {
                         if (el) buttons.current.set(faq.n, el)
@@ -180,7 +181,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                         <Plus className="size-4" strokeWidth={2.5} />
                       </span>
                     </button>
-                  </h3>
+                  </QuestionHeading>
                   <div
                     id={panelId}
                     role="region"

@@ -75,7 +75,7 @@ export function HowItWorks() {
               {step.action && (
                 <a
                   href={step.action.phone.href}
-                  className="mt-5 inline-flex items-center gap-2 self-start font-bold text-route-300 underline decoration-route-300/40 underline-offset-4 hover:text-white lg:self-center"
+                  className="mt-4 inline-flex min-h-11 items-center gap-2 self-start font-bold text-route-300 underline decoration-route-300/40 underline-offset-4 hover:text-white lg:self-center"
                 >
                   {step.action.label}: <span className="tabular">{step.action.phone.display}</span>
                 </a>

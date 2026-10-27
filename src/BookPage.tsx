@@ -66,7 +66,7 @@ export default function BookPage() {
                   <Phone aria-hidden="true" className="size-5" />
                   <span className="tabular">{PHONES.main.display}</span>
                 </a>
-                <a href={PHONES.secondary.href} className="tabular mt-3 block text-center font-bold text-route-700 underline">
+                <a href={PHONES.secondary.href} className="tabular mt-2 flex min-h-11 items-center justify-center font-bold text-route-700 underline">
                   or {PHONES.secondary.display}
                 </a>
               </div>

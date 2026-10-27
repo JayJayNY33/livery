@@ -57,9 +57,9 @@ export function RideCheck() {
     <div className="rounded-3xl bg-white p-6 text-ink shadow-lift sm:p-9">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h3 className="text-[clamp(1.6rem,3vw,2.1rem)] font-bold leading-tight text-navy-900">
+          <h2 className="text-[clamp(1.6rem,3vw,2.1rem)] font-bold leading-tight text-navy-900">
             Is Fast Track right for my ride?
-          </h3>
+          </h2>
           <p className="mt-2 text-ink-soft">Three quick questions. Your next step appears when all three are answered.</p>
         </div>
         <p className="tabular text-small font-bold text-ink-faint" aria-hidden="true">

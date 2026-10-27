@@ -78,7 +78,7 @@ export function Header() {
                     href={sectionHref(link.href)}
                     aria-current={isActive ? 'location' : undefined}
                     className={`relative rounded-md px-2.5 py-2 text-small xl:px-3 xl:text-base font-bold transition-colors duration-200 ${
-                      isActive ? 'text-brand-red' : 'text-brand-red hover:text-white'
+                      isActive ? 'text-white' : 'text-white/80 hover:text-white'
                     }`}
                   >
                     {link.label}
@@ -98,7 +98,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={PHONES.main.href}
-            className="group inline-flex items-center gap-2.5 rounded-lg bg-route-600 px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-route-500 sm:px-4"
+            className="group inline-flex min-h-11 items-center gap-2.5 rounded-lg bg-route-600 px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-route-500 sm:px-4"
           >
             <Phone aria-hidden="true" className="size-4" strokeWidth={2.4} />
             <span className="sm:hidden">Call</span>
@@ -109,7 +109,7 @@ export function Header() {
           <a
             href={BOOK_HREF}
             aria-current={active === BOOK_HREF ? 'page' : undefined}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
           >
             <CalendarPlus aria-hidden="true" className="hidden size-4 sm:block" strokeWidth={2.4} />
             <span className="sm:hidden">Book</span>
@@ -143,7 +143,7 @@ export function Header() {
                   href={sectionHref(link.href)}
                   onClick={() => setOpen(false)}
                   aria-current={active === link.href ? 'location' : undefined}
-                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-brand-red"
+                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-white"
                 >
                   {link.label}
                   {active === link.href && <span className="size-2 rounded-full bg-brand-red" aria-hidden="true" />}
