@@ -54,8 +54,9 @@ export function Header() {
     }
   }, [open])
 
+  // Solid background on purpose: a backdrop-filter on the header would trap the fixed mobile menu inside it.
   return (
-    <header className="on-navy sticky top-0 z-50 border-b border-white/10 bg-navy-900/95 backdrop-blur-sm supports-[backdrop-filter]:bg-navy-900/88">
+    <header className="on-navy sticky top-0 z-50 border-b border-white/10 bg-navy-900">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-navy-900"
@@ -134,7 +135,7 @@ export function Header() {
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
-        <nav aria-label="Mobile" className="planner-rules-navy h-full overflow-y-auto px-4 pb-10 pt-4 sm:px-6">
+        <nav aria-label="Mobile" className="planner-rules-navy h-full overflow-y-auto px-4 pb-32 pt-4 sm:px-6">
           <ul className="divide-y divide-white/10 border-y border-white/10">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
