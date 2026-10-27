@@ -43,44 +43,28 @@ const SERVICES: Service[] = [
 
 export function Services() {
   return (
-    <section id="services" aria-labelledby="services-title" className="relative bg-paper py-20 sm:py-28">
+    <section id="services" aria-labelledby="services-title" className="relative bg-paper py-20 sm:py-24">
       <div className="planner-rules pointer-events-none absolute inset-0" aria-hidden="true" />
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16 lg:px-8">
-        <div className="lg:sticky lg:top-28 lg:self-start">
-          <h2 id="services-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
-            Our Services
-          </h2>
-          <p className="mt-5 max-w-md text-lg text-ink-soft">
-            From a single specialist visit to dialysis three times a week, we get you there and back with the same
-            care every trip.
-          </p>
-          <figure className="mt-8 hidden overflow-hidden rounded-2xl shadow-card lg:block">
-            <img
-              src="/images/sonata-800.webp"
-              srcSet="/images/sonata-800.webp 800w, /images/sonata-1400.webp 1400w"
-              sizes="30vw"
-              width={1400}
-              height={933}
-              loading="lazy"
-              decoding="async"
-              alt="A silver Hyundai Sonata sedan on a sunny city street"
-              className="aspect-[3/2] w-full object-cover"
-            />
-            <figcaption className="bg-white px-4 py-3 text-sm text-ink-soft">
-              Standard sedans, including Hyundai Sonatas and Elantras.
-            </figcaption>
-          </figure>
-        </div>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 id="services-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
+          Our Services
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg text-ink-soft">
+          From a single specialist visit to dialysis three times a week, we get you there and back with the same care
+          every trip.
+        </p>
 
         <div>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map(({ title, body, icon: Icon }) => (
-              <li key={title} className="flex flex-col rounded-2xl border border-rule bg-white p-6 shadow-card">
-                <span className="mb-5 inline-flex size-12 items-center justify-center rounded-xl bg-navy-900 text-route-300">
-                  <Icon aria-hidden="true" className="size-6" strokeWidth={2} />
+              <li key={title} className="flex gap-4 rounded-2xl border border-rule bg-white p-6 shadow-card">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-red/8 text-brand-red">
+                  <Icon aria-hidden="true" className="size-6" strokeWidth={1.9} />
                 </span>
-                <h3 className="text-xl font-semibold leading-snug text-navy-900">{title}</h3>
-                <p className="mt-2 text-ink-soft">{body}</p>
+                <div>
+                  <h3 className="text-lg font-semibold leading-snug text-navy-900">{title}</h3>
+                  <p className="mt-1 text-ink-soft">{body}</p>
+                </div>
               </li>
             ))}
           </ul>

@@ -49,7 +49,6 @@ To connect it, set `VITE_CONTACT_ENDPOINT` to any HTTPS endpoint that accepts a 
 
 - **Photos are stock placeholders** (Unsplash License). Replace them with real Fast Track vehicles and drivers when available:
   - `hero-*.webp`, `og-image.jpg`: [Centre for Ageing Better, "Elderly man getting into a car"](https://unsplash.com/photos/aang4D4VMEI)
-  - `sonata-*.webp`: [Hyundai Motor Group, silver Sonata](https://unsplash.com/photos/ZPvrPejfrPU)
 - **Logo:** `src/assets/logo.png` was cut from the logo embedded in the FAQ file. A vector (SVG) original would look sharper.
 - **Domain:** once you know it, make the `og:image` URL in `index.html` absolute (`https://yourdomain.com/images/og-image.jpg`). Also add `<link rel="canonical">` and a `"url"` field to the JSON-LD.
 - FAQ #15 in the source file listed "Cell Phone Numbers: To be added". That line is left out until real numbers exist. Add them in `src/data/faqs.tsx`.
