@@ -43,23 +43,6 @@ export function About() {
             <h2 id="about-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
               Getting you to care, the way we would want our own family driven
             </h2>
-            <div className="mt-7 grid max-w-2xl gap-5 text-lg text-ink-soft">
-              <p>
-                Fast Track Medical &amp; Livery Transportation is a Long Island, New York company committed to
-                dependable non-emergency medical transportation. We drive patients to the appointments that keep them
-                well: doctor and specialist visits, hospital and outpatient care, dialysis, physical therapy, and
-                rehabilitation.
-              </p>
-              <p>
-                A missed ride can mean a missed treatment. That is why we focus on getting every passenger there
-                safely, comfortably, and on time, and on getting them home again without an unnecessary wait.
-              </p>
-              <p>
-                We work with patients, families, caregivers, and healthcare coordinators. We treat every
-                passenger with patience and respect, because for us, this work is about people, not just
-                destinations.
-              </p>
-            </div>
           </div>
 
           <aside aria-labelledby="good-to-know" className="self-start rounded-3xl border border-rule bg-paper p-6 sm:p-8">
@@ -83,19 +66,6 @@ export function About() {
         </div>
       </div>
 
-      <figure className="mx-auto mt-16 max-w-7xl px-4 sm:mt-20 sm:px-6 lg:px-8">
-        <img
-          src="/images/road-1400.webp"
-          srcSet="/images/road-800.webp 800w, /images/road-1400.webp 1400w, /images/road-2000.webp 2000w"
-          sizes="(min-width: 1280px) 1216px, 94vw"
-          width={2000}
-          height={1333}
-          loading="lazy"
-          decoding="async"
-          alt="A dark sedan driving along a quiet, tree-lined road"
-          className="aspect-[21/9] w-full rounded-3xl object-cover shadow-card"
-        />
-      </figure>
     </section>
   )
 }

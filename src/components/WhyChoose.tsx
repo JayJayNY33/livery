@@ -1,4 +1,4 @@
-import { CalendarCheck2, HandHeart, MessagesSquare, ShieldCheck, UserRound, Clock3 } from 'lucide-react'
+import { CalendarCheck2, MessagesSquare, ShieldCheck, Clock3 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 const REASONS: { title: string; body: string; icon: LucideIcon }[] = [
@@ -8,19 +8,9 @@ const REASONS: { title: string; body: string; icon: LucideIcon }[] = [
     icon: Clock3,
   },
   {
-    title: 'Compassionate service',
-    body: 'Patience and kindness from pickup to drop-off, especially after a long treatment.',
-    icon: HandHeart,
-  },
-  {
     title: 'Patient dignity and respect',
     body: 'Every passenger is treated with dignity, respect, patience, and professionalism.',
     icon: ShieldCheck,
-  },
-  {
-    title: 'Personalized attention',
-    body: 'We get to know our regular riders and do our best to honor driver preferences when scheduling permits.',
-    icon: UserRound,
   },
   {
     title: 'Help with recurring rides',
@@ -38,17 +28,29 @@ export function WhyChoose() {
   return (
     <section aria-labelledby="why-title" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-end gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
             <h2 id="why-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
               Why choose Fast Track?
             </h2>
-            <p className="mt-5 max-w-lg text-lg text-ink-soft">
-              Medical transportation is about much more than getting from one place to another. It is about getting
-              people to the care they need, with dignity, respect, and reliability.
-            </p>
+            <div className="mt-7 grid max-w-2xl gap-5 text-lg text-ink-soft">
+              <p>
+                Fast Track Medical &amp; Livery Transportation is a Long Island, New York company committed to
+                dependable non-emergency medical transportation. We drive patients to the appointments that keep them
+                well: doctor and specialist visits, hospital and outpatient care, dialysis, physical therapy, and
+                rehabilitation.
+              </p>
+              <p>
+                A missed ride can mean a missed treatment. That is why we focus on getting every passenger there
+                safely, comfortably, and on time, and on getting them home again without an unnecessary wait.
+              </p>
+              <p>
+                We work with patients, families, caregivers, and healthcare coordinators. We treat every passenger
+                with patience and respect, because for us, this work is about people, not just destinations.
+              </p>
+            </div>
           </div>
-          <blockquote className="relative rounded-2xl bg-navy-900 px-7 py-8 text-white sm:px-9">
+          <blockquote className="relative rounded-2xl bg-navy-900 lg:mt-24 px-7 py-8 text-white sm:px-9">
             <p className="font-display text-[clamp(1.6rem,3vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.02em]">
               At Fast Track, you are more than just another ride.
             </p>
@@ -58,22 +60,8 @@ export function WhyChoose() {
           </blockquote>
         </div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <figure className="relative overflow-hidden rounded-2xl shadow-card">
-            <img
-              src="/images/standing-800.webp"
-              srcSet="/images/standing-800.webp 800w, /images/standing-1400.webp 1400w"
-              sizes="(min-width: 1024px) 40vw, 92vw"
-              width={1400}
-              height={933}
-              loading="lazy"
-              decoding="async"
-              alt="A smiling older man stands at the open rear door of a dark sedan"
-              className="h-full min-h-72 w-full object-cover object-[45%_center]"
-            />
-          </figure>
-
-          <ul className="grid content-start gap-x-10 sm:grid-cols-2">
+        <div className="mt-14">
+          <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
             {REASONS.map(({ title, body, icon: Icon }) => (
               <li key={title} className="flex gap-4 border-t border-rule py-6">
                 <Icon aria-hidden="true" className="mt-1 size-6 shrink-0 text-sun-600" strokeWidth={1.9} />
