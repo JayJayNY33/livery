@@ -1,4 +1,4 @@
-import { ArrowDown, Phone } from 'lucide-react'
+import { ArrowDown, ArrowRight, Phone, Star } from 'lucide-react'
 import { PHONES } from '../data/site'
 import { WeekStrip } from './WeekStrip'
 
@@ -11,17 +11,17 @@ export function Hero() {
         <div className="flex flex-col justify-center">
           <h1
             id="hero-title"
-            className="text-[clamp(2.6rem,6.2vw,5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
+            className="order-1 text-[clamp(2.6rem,6.2vw,5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
           >
             Reliable Transportation.{' '}
             <span className="text-route-300">Compassionate Care.</span>
           </h1>
-          <p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-route-100/90 sm:text-xl">
+          <p className="order-3 mt-6 max-w-[34rem] text-lg leading-relaxed text-route-100/90 sm:text-xl">
             Getting to your medical appointments should be one less thing to worry about. Fast Track provides
             dependable non-emergency medical transportation throughout our approved Long Island service areas.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="order-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href={PHONES.main.href}
               className="group inline-flex items-center justify-center gap-3 rounded-xl bg-route-600 px-6 py-4 text-lg font-bold text-white shadow-card transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-route-500"
@@ -41,13 +41,28 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="mt-6 text-[0.95rem] text-route-100/75">
+          <p className="order-5 mt-6 text-[0.95rem] text-route-100/75">
             Medicaid rides are arranged through MAS at{' '}
             <a href={PHONES.mas.href} className="tabular font-bold text-white underline decoration-route-300/60">
               {PHONES.mas.display}
             </a>
             . Ask for Fast Track.
           </p>
+
+          <a
+            href="/reviews#write"
+            className="group order-2 mt-6 inline-flex flex-wrap items-center lg:order-6 lg:mt-8 gap-x-4 gap-y-2 self-start rounded-xl py-1 text-white"
+          >
+            <span className="inline-flex gap-1" aria-hidden="true">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <Star key={i} className="size-7 fill-sun-500 text-sun-500" strokeWidth={1.5} />
+              ))}
+            </span>
+            <span className="inline-flex items-center gap-2 font-display text-[clamp(1.6rem,3.2vw,2.1rem)] font-bold leading-none tracking-[-0.02em] underline decoration-sun-500/70 decoration-2 underline-offset-[0.22em] group-hover:decoration-sun-500">
+              Write a review
+              <ArrowRight aria-hidden="true" className="size-7 transition-transform duration-300 ease-out-expo group-hover:translate-x-1" />
+            </span>
+          </a>
         </div>
 
         <div className="relative mx-auto w-full max-w-[30rem] lg:max-w-none">

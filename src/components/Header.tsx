@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import { Menu, Phone, X } from 'lucide-react'
-import { NAV_LINKS, PHONES } from '../data/site'
+import { NAV_LINKS, PHONES, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
 function useActiveSection() {
-  const [active, setActive] = useState<string>('#home')
+  const [active, setActive] = useState<string>(() =>
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/reviews') ? '/reviews' : '#home',
+  )
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.href.slice(1))
+    if (window.location.pathname.startsWith('/reviews')) return
+    const ids = NAV_LINKS.filter((l) => l.href.startsWith('#')).map((l) => l.href.slice(1))
     const sections = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => !!el)
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,7 +57,7 @@ export function Header() {
         Skip to content
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="shrink-0" aria-label="Fast Track Medical & Livery Transportation, back to top">
+        <a href={sectionHref('#home')} className="shrink-0" aria-label="Fast Track Medical & Livery Transportation, back to top">
           <Logo className="h-12 w-auto sm:h-[3.4rem]" />
         </a>
 
@@ -65,7 +68,7 @@ export function Header() {
               return (
                 <li key={link.href}>
                   <a
-                    href={link.href}
+                    href={sectionHref(link.href)}
                     aria-current={isActive ? 'location' : undefined}
                     className={`relative rounded-md px-3 py-2 text-[0.95rem] font-medium transition-colors duration-200 ${
                       isActive ? 'text-white' : 'text-route-100/75 hover:text-white'
@@ -121,7 +124,7 @@ export function Header() {
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={sectionHref(link.href)}
                   onClick={() => setOpen(false)}
                   aria-current={active === link.href ? 'location' : undefined}
                   className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-white"

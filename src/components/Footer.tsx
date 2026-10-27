@@ -1,4 +1,4 @@
-import { BUSINESS_NAME, EMAIL, EMAIL_HREF, NAV_LINKS, PHONES, TAGLINE } from '../data/site'
+import { BUSINESS_NAME, EMAIL, EMAIL_HREF, EMERGENCY, NAV_LINKS, OWNER_LABEL, OWNER_PHONE, PHONES, TAGLINE, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
             <ul className="mt-4 grid gap-2.5">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="hover:text-white hover:underline">
+                  <a href={sectionHref(l.href)} className="hover:text-white hover:underline">
                     {l.label}
                   </a>
                 </li>
@@ -31,7 +31,7 @@ export function Footer() {
           <div>
             <h2 className="font-display text-base font-semibold text-white">Contact</h2>
             <dl className="mt-4 grid gap-3 text-[0.98rem]">
-              {[PHONES.main, PHONES.secondary, PHONES.mas].map((p) => (
+              {[PHONES.main, PHONES.secondary, ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL }] : []), PHONES.mas].map((p) => (
                 <div key={p.label}>
                   <dt className="text-sm text-route-100/65">{p.label}</dt>
                   <dd>
@@ -46,6 +46,14 @@ export function Footer() {
                 <dd>
                   <a href={EMAIL_HREF} className="break-all font-bold text-white hover:underline">
                     {EMAIL}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm text-route-100/65">Medical emergency</dt>
+                <dd>
+                  <a href={EMERGENCY.href} className="font-bold text-white hover:underline">
+                    Call {EMERGENCY.display}
                   </a>
                 </dd>
               </div>

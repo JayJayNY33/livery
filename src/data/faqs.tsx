@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react'
 import { PhoneLink } from '../components/PhoneLink'
-import { EMAIL, EMAIL_HREF } from './site'
+import { EMAIL, EMAIL_HREF, EMERGENCY, OWNER_LABEL, OWNER_PHONE } from './site'
 
 /*
  * Source of truth: Fast_Track_Deep_Blue_Interactive_FAQ.html (15 questions).
- * Question and answer wording is preserved from that file. Changes are limited to
- * markup: phone numbers and the email address are now links, and the
- * "Cell Phone Numbers: To be added" placeholder line in #15 is held back until
- * real numbers are supplied.
+ * Wording follows that file, plus the client's requested edits: #7 (drivers like
+ * family), #9 (caregiver or care coordinator), #11 (client brings their own car seat),
+ * and 911 next to every contact list. Phone numbers and email are links. The
+ * owner's direct line appears once OWNER_PHONE is set in site.ts.
  */
 
 export type FaqCategory = 'services' | 'medicaid' | 'ride' | 'about'
@@ -35,6 +35,42 @@ const Main = () => (
 const Secondary = ({ label = 'Secondary:' }: { label?: string }) => (
   <>
     <strong>{label}</strong> <PhoneLink phone="secondary" />
+  </>
+)
+const Owner = () =>
+  OWNER_PHONE && (
+    <>
+      <strong>{OWNER_LABEL}:</strong> <a href={OWNER_PHONE.href}>{OWNER_PHONE.display}</a>
+    </>
+  )
+const Emergency = () => (
+  <>
+    <strong>Medical emergency:</strong> <a href={EMERGENCY.href}>Call {EMERGENCY.display}</a>
+  </>
+)
+/** Owner line and 911, for contact blocks set one per line. */
+const UrgentLines = () => (
+  <>
+    {OWNER_PHONE && (
+      <>
+        <br />
+        <Owner />
+      </>
+    )}
+    <br />
+    <Emergency />
+  </>
+)
+/** Owner line and 911, for contact blocks separated by pipes. */
+const UrgentInline = () => (
+  <>
+    {OWNER_PHONE && (
+      <>
+        {' '}
+        | <Owner />
+      </>
+    )}{' '}
+    | <Emergency />
   </>
 )
 
@@ -121,7 +157,8 @@ export const FAQS: Faq[] = [
     answer: (
       <p>
         We understand that familiarity and consistency matter, especially for patients attending recurring
-        appointments. We do our best to accommodate driver preferences when scheduling and availability permit.
+        appointments. We do our best to accommodate driver preferences when scheduling and availability permit. Our drivers are like
+        family, and every one of us cares for each client.
       </p>
     ),
   },
@@ -139,6 +176,7 @@ export const FAQS: Faq[] = [
           <Main />
           <br />
           <Secondary />
+          <UrgentLines />
         </p>
       </>
     ),
@@ -177,11 +215,12 @@ export const FAQS: Faq[] = [
           </li>
         </ul>
         <p>
-          <strong>How do I set one up?</strong> Contact MAS at{' '}
+          <strong>How do I set one up?</strong> Contact your caregiver or care coordinator to set up a standing
+          order through MAS at{' '}
           <strong>
             <PhoneLink phone="mas" />
-          </strong>{' '}
-          and ask about a standing order. You may request Fast Track as your preferred provider, subject to MAS
+          </strong>
+          . You may request Fast Track as your preferred provider, subject to MAS
           approval, assignment, and availability.
         </p>
         <p>
@@ -259,8 +298,10 @@ export const FAQS: Faq[] = [
             wheelchair or walker that fits securely in the trunk; please confirm with us in advance.
           </li>
           <li>
-            <strong>Car seats and booster seats:</strong> Notify MAS and Fast Track in advance. Confirm who will provide
-            and properly install an age- and size-appropriate restraint as required by New York law.
+            <strong>Car seats and booster seats:</strong> Clients are responsible for bringing their own age- and
+            size-appropriate car seat or booster seat. If you don’t have one, let us know in advance so we can schedule
+            your ride with a seat from Fast Track. Please also notify MAS, and make sure the seat is properly installed
+            as required by New York law.
           </li>
           <li>
             <strong>Special transportation needs:</strong> Tell us about mobility limitations, assistance needs, and
@@ -278,6 +319,7 @@ export const FAQS: Faq[] = [
         <p>We strive to accommodate individual needs while keeping safety and comfort our top priorities.</p>
         <p>
           <Main /> | <Secondary />
+          <UrgentInline />
         </p>
       </>
     ),
@@ -326,6 +368,7 @@ export const FAQS: Faq[] = [
         </p>
         <p>
           <Main /> | <Secondary /> | <strong>MAS:</strong> <PhoneLink phone="mas" />
+          <UrgentInline />
         </p>
         <p>
           <strong>A small courtesy makes a big difference. Thank you for helping us serve everyone better.</strong>
@@ -368,6 +411,7 @@ export const FAQS: Faq[] = [
         </p>
         <p>
           <Main /> | <Secondary /> | <strong>MAS:</strong> <PhoneLink phone="mas" />
+          <UrgentInline />
         </p>
         <p className="faq-important">
           <em>
@@ -404,6 +448,7 @@ export const FAQS: Faq[] = [
           <strong>Email:</strong> <a href={EMAIL_HREF}>{EMAIL}</a>
           <br />
           <strong>MAS Scheduling:</strong> <PhoneLink phone="mas" />
+          <UrgentLines />
         </p>
       </>
     ),

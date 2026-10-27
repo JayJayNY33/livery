@@ -1,11 +1,12 @@
-import { Mail, Phone, PhoneCall, CalendarRange } from 'lucide-react'
+import { Mail, Phone, PhoneCall, CalendarRange, Siren } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { EMAIL, EMAIL_HREF, PHONES } from '../data/site'
+import { EMAIL, EMAIL_HREF, OWNER_LABEL, OWNER_PHONE, PHONES } from '../data/site'
 import { ContactForm } from './ContactForm'
 
 const LINES: { label: string; display: string; href: string; note: string; icon: LucideIcon; primary?: boolean }[] = [
   { ...PHONES.main, note: 'Rides, scheduling, and questions', icon: PhoneCall, primary: true },
   { ...PHONES.secondary, note: 'If the main line is busy', icon: Phone },
+  ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL, note: 'For problems with a ride in progress', icon: Siren }] : []),
   { ...PHONES.mas, note: 'Arrange Medicaid trips and ask for Fast Track', icon: CalendarRange },
   { label: 'Email', display: EMAIL, href: EMAIL_HREF, note: 'For non-urgent questions', icon: Mail },
 ]

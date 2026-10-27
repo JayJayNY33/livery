@@ -55,3 +55,13 @@ To connect it, set `VITE_CONTACT_ENDPOINT` to any HTTPS endpoint that accepts a 
 - **Logo:** `src/assets/logo.png` was cut from the logo embedded in the FAQ file. A vector (SVG) original would look sharper.
 - **Domain:** once you know it, make the `og:image` URL in `index.html` absolute (`https://yourdomain.com/images/og-image.jpg`). Also add `<link rel="canonical">` and a `"url"` field to the JSON-LD.
 - FAQ #15 in the source file listed "Cell Phone Numbers: To be added". That line is left out until real numbers exist. Add them in `src/data/faqs.tsx`.
+
+## Filling in client details
+
+All in `src/data/`:
+
+- **Owner's direct line:** in `site.ts`, set `OWNER_PHONE` (see the example in the comment). It then shows up as "Urgent ride issues (owner’s direct line)" in the Contact section, the footer, and FAQs #8, #11, #12, #13 and #15. While it's `null` it isn't shown.
+- **Google review link:** in `site.ts`, set `GOOGLE_REVIEW_URL` once the Google Business Profile is set up. A "Review us on Google" button then appears on the Reviews page.
+- **Reviews:** add real reviews, posted with the client's permission, to `REVIEWS` in `reviews.ts`. Until there are any, the Reviews page shows "Be one of our first reviewers".
+
+The Reviews page is `reviews.html` and lives at `/reviews` (`vercel.json` turns on clean URLs). Reviews submitted through its form open the visitor's email app, addressed to the office.
