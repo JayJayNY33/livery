@@ -31,7 +31,7 @@ export function WeekStrip({ className = '' }: Props) {
           <span className="font-display text-[1.05rem] font-semibold leading-tight text-navy-900">
             Standing order
           </span>
-          <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs font-bold text-ink-soft">Example</span>
+          <span className="rounded-full bg-sun-100 px-2.5 py-0.5 text-xs font-bold text-sun-ink">Example</span>
         </figcaption>
         <ol className="grid grid-cols-7 gap-1.5" aria-hidden="true">
           {DAYS.map((d, i) => (

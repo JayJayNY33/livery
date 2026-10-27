@@ -32,6 +32,15 @@
   --color-ink-soft: #3d4f68;
   --color-ink-faint: #5a6b82;
 
+  /* Warm accent: small highlights only, never buttons or links */
+  --color-sun-600: #b7811f;
+  --color-sun-500: #d39b32;
+  --color-sun-100: #fbf0d9;
+  --color-sun-ink: #7a4f08;
+
+  /* Logo red: thin brand lines only, never buttons */
+  --color-brand-red: #c8102e;
+
   /* Notices */
   --color-alert: #9a3412;
   --color-alert-bg: #fff4ec;
@@ -138,6 +147,17 @@
 .booked-block {
   transform-origin: top;
   animation: book-in 700ms var(--ease-out-expo) both;
+}
+
+/* Short gold rule under section headings */
+section h2[id$='-title']::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 1.1rem;
+  border-radius: 2px;
+  background: var(--color-sun-500);
 }
 
 /* FAQ answer typography */

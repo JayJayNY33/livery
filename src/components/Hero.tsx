@@ -6,10 +6,6 @@ export function Hero() {
   return (
     <section id="home" aria-labelledby="hero-title" className="on-navy relative overflow-hidden bg-navy-900 text-white">
       <div className="planner-rules-navy pointer-events-none absolute inset-0" aria-hidden="true" />
-      <div
-        className="pointer-events-none absolute -right-40 -top-40 size-[42rem] rounded-full bg-route-600/20 blur-3xl"
-        aria-hidden="true"
-      />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pt-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 lg:px-8 lg:pb-24 lg:pt-20">
         <div className="flex flex-col justify-center">

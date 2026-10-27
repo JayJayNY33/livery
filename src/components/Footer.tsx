@@ -4,7 +4,7 @@ import { Logo } from './Logo'
 export function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="on-navy bg-navy-950 pb-28 pt-16 text-route-100/80 lg:pb-12">
+    <footer className="on-navy border-t-[3px] border-brand-red bg-navy-950 pb-28 pt-16 text-route-100/80 lg:pb-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.3fr_0.7fr_1fr]">
           <div>

@@ -116,7 +116,7 @@ export function RideCheck() {
           <div className="grid gap-3">
             {allYes ? (
               <div className="flex gap-4 rounded-2xl bg-route-100/70 p-5 text-navy-900">
-                <CheckCircle2 aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-route-700" />
+                <CheckCircle2 aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-sun-600" />
                 <div>
                   <p className="font-display text-lg font-semibold">Fast Track may be a good fit for this ride.</p>
                   <p className="mt-1">
