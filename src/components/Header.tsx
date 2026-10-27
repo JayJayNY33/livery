@@ -77,7 +77,7 @@ export function Header() {
                   <a
                     href={sectionHref(link.href)}
                     aria-current={isActive ? 'location' : undefined}
-                    className={`relative rounded-md px-2.5 py-2 text-[0.95rem] xl:px-3 font-medium transition-colors duration-200 ${
+                    className={`relative rounded-md px-2.5 py-2 text-small xl:px-3 xl:text-base font-bold transition-colors duration-200 ${
                       isActive ? 'text-brand-red' : 'text-brand-red hover:text-white'
                     }`}
                   >
@@ -98,7 +98,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={PHONES.main.href}
-            className="group inline-flex items-center gap-2.5 rounded-lg bg-route-600 px-3.5 py-2.5 text-[0.95rem] font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-route-500 sm:px-4"
+            className="group inline-flex items-center gap-2.5 rounded-lg bg-route-600 px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-route-500 sm:px-4"
           >
             <Phone aria-hidden="true" className="size-4" strokeWidth={2.4} />
             <span className="sm:hidden">Call</span>
@@ -109,7 +109,7 @@ export function Header() {
           <a
             href={BOOK_HREF}
             aria-current={active === BOOK_HREF ? 'page' : undefined}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-[0.95rem] font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
           >
             <CalendarPlus aria-hidden="true" className="hidden size-4 sm:block" strokeWidth={2.4} />
             <span className="sm:hidden">Book</span>

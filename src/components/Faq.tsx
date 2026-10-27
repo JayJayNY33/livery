@@ -82,7 +82,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
           <p className="mt-5 text-lg text-ink-soft">Your transportation questions, answered. Because your care matters.</p>
           <div className="mt-8 rounded-2xl border border-rule bg-white p-5 shadow-card">
             <p className="font-bold text-navy-900">Still have a question?</p>
-            <p className="mt-1 text-[0.98rem] text-ink-soft">Our office is happy to help.</p>
+            <p className="mt-1 text-body text-ink-soft">Our office is happy to help.</p>
             <a
               href={PHONES.main.href}
               className="tabular mt-3 inline-flex font-display text-2xl font-semibold text-route-700 underline decoration-route-300 underline-offset-4 hover:text-navy-900"
@@ -104,14 +104,14 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setFilter(c.id)}
-                    className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-4 text-[0.95rem] font-bold transition-colors duration-150 ${
+                    className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-4 text-small font-bold transition-colors duration-150 ${
                       active
                         ? 'border-navy-900 bg-navy-900 text-white'
                         : 'border-rule-strong bg-white text-navy-900 hover:border-route-500'
                     }`}
                   >
                     {c.label}
-                    <span className={`tabular text-xs ${active ? 'text-route-300' : 'text-ink-faint'}`}>{count}</span>
+                    <span className={`tabular text-badge ${active ? 'text-route-300' : 'text-ink-faint'}`}>{count}</span>
                   </button>
                 )
               })}
@@ -119,7 +119,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
             <button
               type="button"
               onClick={() => setAll(!allOpen)}
-              className="inline-flex min-h-10 shrink-0 items-center gap-2 self-start rounded-lg px-2 text-[0.95rem] font-bold text-route-700 hover:text-navy-900 sm:self-auto"
+              className="inline-flex min-h-10 shrink-0 items-center gap-2 self-start rounded-lg px-2 text-small font-bold text-route-700 hover:text-navy-900 sm:self-auto"
             >
               {allOpen ? (
                 <ChevronsDownUp aria-hidden="true" className="size-4" />
@@ -146,7 +146,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                     isOpen ? 'border-route-300 shadow-lift' : 'border-rule shadow-card hover:border-rule-strong'
                   }`}
                 >
-                  <h3 className="text-[1.08rem] font-semibold leading-snug sm:text-[1.15rem]">
+                  <h3 className="text-title-sm font-semibold sm:text-title">
                     <button
                       ref={(el) => {
                         if (el) buttons.current.set(faq.n, el)
@@ -191,7 +191,7 @@ export function Faq({ asPage = false }: { asPage?: boolean }) {
                     {...(isOpen ? {} : { inert: '' })}
                   >
                     <div className="overflow-hidden">
-                      <div className="faq-answer px-5 pb-6 pt-5 text-[1.02rem] leading-[1.7] text-ink-soft sm:px-6 sm:pl-[4.25rem]">
+                      <div className="faq-answer max-w-[calc(56ch+4.25rem)] px-5 pb-6 pt-5 text-body leading-[1.7] text-ink-soft sm:px-6 sm:pl-[4.25rem]">
                         {faq.answer}
                       </div>
                     </div>

@@ -49,7 +49,7 @@ export function GoodToKnow() {
                 <Icon aria-hidden="true" className="size-6" strokeWidth={1.9} />
               </span>
               <div>
-                <h3 className="text-lg font-semibold leading-snug text-navy-900">{title}</h3>
+                <h3 className="text-title font-semibold text-navy-900">{title}</h3>
                 <p className="mt-1 text-ink-soft">{body}</p>
               </div>
             </li>

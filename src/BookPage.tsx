@@ -41,7 +41,7 @@ export default function BookPage() {
                   <Icon aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-brand-red" strokeWidth={1.9} />
                   <div>
                     <p className="font-bold text-white">{title}</p>
-                    <p className="mt-1 text-[0.95rem] text-route-100/80">{body}</p>
+                    <p className="mt-1 text-small text-route-100/80">{body}</p>
                   </div>
                 </li>
               ))}

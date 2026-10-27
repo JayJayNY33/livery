@@ -72,7 +72,7 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
                     display
                   )}
                 </span>
-                <span className={`text-sm ${primary ? 'text-white/85' : 'text-route-100/75'}`}>{note}</span>
+                <span className={`text-small ${primary ? 'text-white/85' : 'text-route-100/75'}`}>{note}</span>
               </a>
             </li>
           ))}
@@ -89,7 +89,7 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
               <p className="font-display text-[clamp(1.5rem,3vw,2.1rem)] font-bold leading-tight">
                 Medical emergency? Call 911.
               </p>
-              <p className="mt-1 text-lg font-semibold text-white/90">Fast Track is not an ambulance service.</p>
+              <p className="mt-1 text-lg font-bold text-white/90">Fast Track is not an ambulance service.</p>
             </div>
           </div>
           <a

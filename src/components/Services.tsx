@@ -62,7 +62,7 @@ export function Services() {
                   <Icon aria-hidden="true" className="size-6" strokeWidth={1.9} />
                 </span>
                 <div>
-                  <h3 className="text-lg font-semibold leading-snug text-navy-900">{title}</h3>
+                  <h3 className="text-title font-semibold text-navy-900">{title}</h3>
                   <p className="mt-1 text-ink-soft">{body}</p>
                 </div>
               </li>
@@ -71,10 +71,10 @@ export function Services() {
 
           <aside
             aria-label="About Medicaid coverage"
-            className="mt-6 flex gap-4 rounded-2xl border border-route-100 bg-route-100/60 p-5 text-[0.98rem] text-navy-900"
+            className="mt-6 flex gap-4 rounded-2xl border border-route-100 bg-route-100/60 p-5 text-body text-navy-900"
           >
             <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-route-700" />
-            <p>
+            <p className="max-w-[52ch]">
               <strong>Not every trip is automatically covered by Medicaid.</strong> Medicaid transportation is
               arranged through MAS and is subject to eligibility, authorization, assignment, and availability. Call
               MAS at{' '}

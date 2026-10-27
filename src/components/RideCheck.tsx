@@ -62,7 +62,7 @@ export function RideCheck() {
           </h3>
           <p className="mt-2 text-ink-soft">Three quick questions. Your next step appears when all three are answered.</p>
         </div>
-        <p className="tabular text-sm font-bold text-ink-faint" aria-hidden="true">
+        <p className="tabular text-small font-bold text-ink-faint" aria-hidden="true">
           {answered} of {QUESTIONS.length} answered
         </p>
       </div>
@@ -77,11 +77,11 @@ export function RideCheck() {
             >
               <legend className="sr-only">{q.label}</legend>
               <div aria-hidden="true">
-                <p className="font-display text-lg font-semibold leading-snug text-navy-900">
+                <p className="font-display text-title-sm font-semibold text-navy-900">
                   <span className="tabular mr-2 text-route-600">{i + 1}.</span>
                   {q.label}
                 </p>
-                <p className="mt-1 text-[0.95rem] text-ink-soft">{q.hint}</p>
+                <p className="mt-1 text-small text-ink-soft">{q.hint}</p>
               </div>
               <div className="flex gap-2">
                 {(['yes', 'no'] as const).map((opt) => {
@@ -162,7 +162,7 @@ export function RideCheck() {
               </>
             )}
             {answers.carSeat === 'yes' && (
-              <p className="text-[0.95rem] text-ink-soft">
+              <p className="text-small text-ink-soft">
                 Bringing a folding wheelchair or walker? We may be able to carry one that fits securely in the trunk.
                 Please confirm with us in advance.
               </p>
@@ -170,7 +170,7 @@ export function RideCheck() {
             <button
               type="button"
               onClick={() => setAnswers({})}
-              className="inline-flex w-fit items-center gap-2 rounded-lg px-2 py-1 text-sm font-bold text-route-700 hover:text-navy-900"
+              className="inline-flex w-fit items-center gap-2 rounded-lg px-2 py-1 text-small font-bold text-route-700 hover:text-navy-900"
             >
               <RotateCcw aria-hidden="true" className="size-4" /> Start over
             </button>

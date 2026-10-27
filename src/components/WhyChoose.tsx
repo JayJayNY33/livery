@@ -33,7 +33,7 @@ export function WhyChoose() {
             <h2 id="why-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
               Why choose Fast Track?
             </h2>
-            <div className="mt-7 grid max-w-2xl gap-5 text-lg text-ink-soft">
+            <div className="mt-7 grid max-w-[38rem] gap-5 text-lg text-ink-soft">
               <p>
                 Fast Track Medical &amp; Livery Transportation is a Long Island, New York company committed to
                 dependable non-emergency medical transportation. We drive patients to the appointments that keep them
@@ -54,7 +54,7 @@ export function WhyChoose() {
             <p className="font-display text-[clamp(1.6rem,3vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.02em]">
               At Fast Track, you are more than just another ride.
             </p>
-            <footer className="mt-4 text-[0.95rem] text-route-100/80">
+            <footer className="mt-4 text-small text-route-100/80">
               After dialysis or a long appointment, we make every reasonable effort to get you home sooner.
             </footer>
           </blockquote>
@@ -66,7 +66,7 @@ export function WhyChoose() {
               <li key={title} className="flex gap-4 border-t border-rule py-6">
                 <Icon aria-hidden="true" className="mt-1 size-6 shrink-0 text-brand-red" strokeWidth={1.9} />
                 <div>
-                  <h3 className="text-lg font-semibold leading-snug text-navy-900">{title}</h3>
+                  <h3 className="text-title font-semibold text-navy-900">{title}</h3>
                   <p className="mt-1.5 text-ink-soft">{body}</p>
                 </div>
               </li>

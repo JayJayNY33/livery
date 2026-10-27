@@ -46,7 +46,7 @@ export function HowItWorks() {
               <Phone aria-hidden="true" className="size-5" />
             </span>
             <span>
-              <span className="block text-sm text-route-100/80">MAS scheduling</span>
+              <span className="block text-small text-route-100/80">MAS scheduling</span>
               <span className="tabular block font-display text-2xl font-semibold tracking-[-0.01em]">
                 {PHONES.mas.display}
               </span>
@@ -67,7 +67,7 @@ export function HowItWorks() {
               >
                 {i + 1}
               </span>
-              <h3 className="text-xl font-semibold lg:text-center">
+              <h3 className="text-title font-semibold lg:text-center">
                 <span className="sr-only">Step {i + 1}: </span>
                 {step.title}
               </h3>
@@ -84,7 +84,7 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-6 max-w-3xl text-[0.95rem] text-route-100/75">
+        <p className="mt-6 max-w-[52ch] text-small text-route-100/75">
           Provider selection and transportation are subject to MAS authorization, assignment, and availability. For
           regular appointments, contact MAS at least three (3) days ahead.
         </p>

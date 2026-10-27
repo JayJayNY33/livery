@@ -26,12 +26,12 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <li className="flex flex-col rounded-2xl border border-rule bg-white p-6 shadow-card">
       <Stars rating={review.rating} />
-      <blockquote className="mt-4 flex-1 text-[1.05rem] leading-relaxed text-ink">“{review.text}”</blockquote>
+      <blockquote className="mt-4 flex-1 text-body leading-relaxed text-ink">“{review.text}”</blockquote>
       <p className="mt-5 font-bold text-navy-900">
         {review.name}
         {review.context && <span className="font-normal text-ink-soft"> · {review.context}</span>}
       </p>
-      {review.date && <p className="text-sm text-ink-faint">{review.date}</p>}
+      {review.date && <p className="text-small text-ink-faint">{review.date}</p>}
     </li>
   )
 }

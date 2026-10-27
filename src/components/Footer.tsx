@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <Logo className="h-16 w-auto" />
             <p className="mt-6 font-display text-xl font-semibold leading-snug text-white">{TAGLINE}</p>
-            <p className="mt-3 max-w-sm text-[0.95rem]">
+            <p className="mt-3 max-w-sm text-small">
               {BUSINESS_NAME} provides dependable non-emergency medical transportation, based on Long Island, New York.
             </p>
           </div>
@@ -35,10 +35,10 @@ export function Footer() {
 
           <div>
             <h2 className="font-display text-base font-semibold text-white">Contact</h2>
-            <dl className="mt-4 grid gap-3 text-[0.98rem]">
+            <dl className="mt-4 grid gap-3 text-body">
               {[PHONES.main, PHONES.secondary, ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL }] : []), PHONES.mas].map((p) => (
                 <div key={p.label}>
-                  <dt className="text-sm text-route-100/65">{p.label}</dt>
+                  <dt className="text-small text-route-100/65">{p.label}</dt>
                   <dd>
                     <a href={p.href} className="tabular font-bold text-white hover:underline">
                       {p.display}
@@ -47,7 +47,7 @@ export function Footer() {
                 </div>
               ))}
               <div>
-                <dt className="text-sm text-route-100/65">Email</dt>
+                <dt className="text-small text-route-100/65">Email</dt>
                 <dd>
                   <a href={EMAIL_HREF} className="break-all font-bold text-white hover:underline">
                     {EMAIL}
@@ -55,7 +55,7 @@ export function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="text-sm text-route-100/65">Medical emergency</dt>
+                <dt className="text-small text-route-100/65">Medical emergency</dt>
                 <dd>
                   <a href={EMERGENCY.href} className="font-bold text-white hover:underline">
                     Call {EMERGENCY.display}
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-route-100/60 sm:flex-row sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-small text-route-100/60 sm:flex-row sm:justify-between">
           <p>
             © {year} {BUSINESS_NAME}.
           </p>

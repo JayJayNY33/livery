@@ -10,12 +10,12 @@ export function Hero() {
         <div className="flex flex-col justify-center">
           <h1
             id="hero-title"
-            className="order-1 text-[clamp(2.6rem,6.2vw,5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
+            className="order-1 text-[clamp(2.6rem,5.6vw,4.5rem)] font-bold leading-[1.02] tracking-[-0.035em]"
           >
             Reliable Transportation.{' '}
             <span className="text-route-300">Drivers Who Treat You Like Family.</span>
           </h1>
-          <p className="order-3 mt-6 max-w-[34rem] text-lg leading-relaxed text-route-100/90 sm:text-xl">
+          <p className="order-3 mt-6 max-w-[34rem] text-title-sm leading-relaxed text-route-100/90 sm:text-lead">
             Rides to doctor visits, dialysis, and therapy across Long Island, with a team that cares about every client.
           </p>
 
@@ -39,7 +39,7 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="order-5 mt-6 text-[0.95rem] text-route-100/75">
+          <p className="order-5 mt-6 text-small text-route-100/75">
             Medicaid rides are arranged through MAS at{' '}
             <a href={PHONES.mas.href} className="tabular font-bold text-white underline decoration-route-300/60">
               {PHONES.mas.display}

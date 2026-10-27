@@ -48,14 +48,14 @@ export function ReviewForm() {
   }
 
   const field =
-    'w-full rounded-xl border bg-paper px-4 py-3 text-[1.02rem] text-ink transition-colors focus:bg-white focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 focus-visible:outline-route-500'
+    'w-full rounded-xl border bg-paper px-4 py-3 text-body text-ink transition-colors focus:bg-white focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 focus-visible:outline-route-500'
 
   return (
     <form noValidate onSubmit={onSubmit} className="rounded-3xl bg-white p-6 text-ink shadow-lift sm:p-8" aria-labelledby={`${id}-title`}>
       <h2 id={`${id}-title`} className="text-2xl font-bold text-navy-900">
         Write a review
       </h2>
-      <p className="mt-1.5 text-[0.98rem] text-ink-soft">
+      <p className="mt-1.5 text-body text-ink-soft">
         Tell us about your ride. When you press send, your email app opens with your review filled in, addressed to
         our office.
       </p>
@@ -86,7 +86,7 @@ export function ReviewForm() {
               </span>
             </label>
           ))}
-          <span className="ml-2 text-[0.98rem] font-bold text-navy-900" aria-hidden="true">
+          <span className="ml-2 text-body font-bold text-navy-900" aria-hidden="true">
             {RATING_WORDS[rating]}
           </span>
         </div>
@@ -125,7 +125,7 @@ export function ReviewForm() {
         {errors.text && <ErrorText id={`${id}-text-error`}>{errors.text}</ErrorText>}
       </div>
 
-      <label className="mt-5 flex cursor-pointer items-start gap-3 text-[0.98rem] text-ink-soft">
+      <label className="mt-5 flex cursor-pointer items-start gap-3 text-body text-ink-soft">
         <input
           type="checkbox"
           checked={consent}
@@ -164,7 +164,7 @@ export function ReviewForm() {
 
 function ErrorText({ id, children }: { id: string; children: string }) {
   return (
-    <p id={id} className="mt-1.5 flex items-center gap-1.5 text-[0.95rem] font-bold text-alert">
+    <p id={id} className="mt-1.5 flex items-center gap-1.5 text-small font-bold text-alert">
       <AlertCircle aria-hidden="true" className="size-4 shrink-0" />
       {children}
     </p>

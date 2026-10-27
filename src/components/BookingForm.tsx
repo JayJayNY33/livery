@@ -183,7 +183,7 @@ export function BookingForm() {
         </Field>
       </Group>
 
-      <p className="mt-8 rounded-2xl bg-paper-deep px-5 py-4 text-[0.98rem] text-navy-900">
+      <p className="mt-8 rounded-2xl bg-paper-deep px-5 py-4 text-body text-navy-900">
         <strong>This is a request, not a confirmed booking.</strong> Your ride is set once our office calls you to
         confirm. Please don’t include detailed medical information.
       </p>
@@ -244,7 +244,7 @@ const aria = (key: keyof TripRequest, errors: TripErrors) => ({
 })
 
 const input = (error?: string) =>
-  `w-full rounded-xl border bg-paper px-4 py-3 text-[1.02rem] text-ink transition-colors focus:bg-white focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 focus-visible:outline-route-500 ${
+  `w-full rounded-xl border bg-paper px-4 py-3 text-body text-ink transition-colors focus:bg-white focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 focus-visible:outline-route-500 ${
     error ? 'border-alert' : 'border-rule-strong hover:border-route-500'
   }`
 
@@ -269,11 +269,11 @@ function Field({ id, label, hint, required, error, wide, children }: { id: strin
             </span>
           )}
         </span>
-        {hint && <span className="text-sm font-normal text-ink-faint">{hint}</span>}
+        {hint && <span className="text-small font-normal text-ink-faint">{hint}</span>}
       </label>
       {children}
       {error && (
-        <p id={`trip-${id}-error`} className="mt-1.5 flex items-center gap-1.5 text-[0.95rem] font-bold text-alert">
+        <p id={`trip-${id}-error`} className="mt-1.5 flex items-center gap-1.5 text-small font-bold text-alert">
           <AlertCircle aria-hidden="true" className="size-4 shrink-0" />
           {error}
         </p>
@@ -285,7 +285,7 @@ function Field({ id, label, hint, required, error, wide, children }: { id: strin
 function Notice({ children, wide, tone = 'info' }: { children: ReactNode; wide?: boolean; tone?: 'info' | 'alert' }) {
   return (
     <div
-      className={`flex gap-3 rounded-xl p-4 text-[0.98rem] ${wide ? 'sm:col-span-2' : ''} ${
+      className={`flex gap-3 rounded-xl p-4 text-body ${wide ? 'sm:col-span-2' : ''} ${
         tone === 'alert' ? 'border border-[#f3d4bf] bg-alert-bg text-[#5b2410]' : 'bg-route-100/60 text-navy-900'
       }`}
     >
