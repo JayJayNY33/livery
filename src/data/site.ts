@@ -32,8 +32,8 @@ export const EMAIL_HREF = `mailto:${EMAIL}`
 export const NAV_LINKS = [
   { href: '#home', label: 'Home' },
   { href: '#services', label: 'Our Services' },
-  { href: '#about', label: 'About Us' },
   { href: '#how-it-works', label: 'How It Works' },
+  { href: '#about', label: 'About Us' },
   { href: '/faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
   { href: '/reviews', label: 'Reviews' },
