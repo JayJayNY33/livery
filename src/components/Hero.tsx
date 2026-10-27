@@ -48,21 +48,6 @@ export function Hero() {
             </a>
             . Ask for Fast Track.
           </p>
-
-          <a
-            href="/reviews#write"
-            className="group order-2 mt-6 inline-flex flex-wrap items-center lg:order-6 lg:mt-8 gap-x-4 gap-y-2 self-start rounded-xl py-1 text-white"
-          >
-            <span className="inline-flex gap-1" aria-hidden="true">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <Star key={i} className="size-7 fill-sun-500 text-sun-500" strokeWidth={1.5} />
-              ))}
-            </span>
-            <span className="inline-flex items-center gap-2 font-display text-[clamp(1.6rem,3.2vw,2.1rem)] font-bold leading-none tracking-[-0.02em] underline decoration-sun-500/70 decoration-2 underline-offset-[0.22em] group-hover:decoration-sun-500">
-              Write a review
-              <ArrowRight aria-hidden="true" className="size-7 transition-transform duration-300 ease-out-expo group-hover:translate-x-1" />
-            </span>
-          </a>
         </div>
 
         <div className="relative mx-auto w-full max-w-[30rem] lg:max-w-none">
@@ -81,6 +66,23 @@ export function Hero() {
               className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-950/55 to-transparent"
               aria-hidden="true"
             />
+            <a
+              href="/reviews#write"
+              className="group absolute right-3 top-3 flex flex-col items-start gap-1.5 rounded-2xl bg-white/95 px-4 py-3 text-navy-900 shadow-lift backdrop-blur-sm transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 sm:right-4 sm:top-4 sm:px-5 sm:py-4"
+            >
+              <span className="inline-flex gap-0.5" aria-hidden="true">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <Star key={i} className="size-5 fill-sun-500 text-sun-500 sm:size-6" strokeWidth={1.5} />
+                ))}
+              </span>
+              <span className="inline-flex items-center gap-2 font-display text-[clamp(1.3rem,2.4vw,1.75rem)] font-bold leading-none tracking-[-0.02em]">
+                Write a review
+                <ArrowRight
+                  aria-hidden="true"
+                  className="size-6 text-route-600 transition-transform duration-300 ease-out-expo group-hover:translate-x-1"
+                />
+              </span>
+            </a>
           </div>
           <WeekStrip className="relative -mt-24 mx-3 sm:absolute sm:-bottom-8 sm:-left-10 sm:mx-0 sm:mt-0 sm:w-[21rem]" />
         </div>
