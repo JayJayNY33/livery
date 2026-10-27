@@ -60,7 +60,7 @@ export function BookingForm() {
   const soon = daysUntil(trip.date) < 3
 
   return (
-    <form noValidate onSubmit={onSubmit} className="rounded-3xl bg-white p-6 text-ink shadow-lift sm:p-8 lg:p-10" aria-label="Trip request">
+    <form noValidate onSubmit={onSubmit} className="rounded-3xl bg-white p-6 text-ink shadow-lift sm:p-8 lg:p-10" aria-label="Ride request">
       <Group title="Who is riding">
         <Field id="name" label="Patient or contact name" required error={errors.name}>
           <input id="trip-name" autoComplete="name" value={trip.name} onChange={(e) => set('name', e.target.value)} {...aria('name', errors)} className={input(errors.name)} />
@@ -194,18 +194,18 @@ export function BookingForm() {
         className="mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-brand-red px-6 py-4 text-lg font-bold text-white transition-colors hover:bg-brand-red-dark disabled:cursor-wait disabled:opacity-70 sm:w-auto"
       >
         <CalendarPlus aria-hidden="true" className="size-5" />
-        {status.kind === 'sending' ? 'Sending…' : 'Send trip request'}
+        {status.kind === 'sending' ? 'Sending…' : 'Send ride request'}
       </button>
 
       <div ref={statusRef} tabIndex={-1} aria-live="polite" className="outline-none">
         {status.kind === 'sent' && (
-          <Result icon="ok" title="Thank you. Your trip request was sent.">
+          <Result icon="ok" title="Thank you. Your ride request was sent.">
             Our office will call you to confirm. If your ride is soon, please call {PHONES.main.display}.
           </Result>
         )}
         {status.kind === 'mail' && (
           <Result icon="ok" title="Your email app should be opening now.">
-            Your trip request is filled in and addressed to our office. Press send there to deliver it. If nothing
+            Your ride request is filled in and addressed to our office. Press send there to deliver it. If nothing
             opened,{' '}
             <a href={status.href} className="font-bold text-route-700 underline">
               try again
@@ -221,7 +221,7 @@ export function BookingForm() {
           </Result>
         )}
         {status.kind === 'error' && (
-          <Result icon="error" title="Your trip request could not be sent.">
+          <Result icon="error" title="Your ride request could not be sent.">
             Please call{' '}
             <a href={PHONES.main.href} className="tabular font-bold underline">
               {PHONES.main.display}

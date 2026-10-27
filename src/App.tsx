@@ -5,6 +5,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { HowItWorks } from './components/HowItWorks'
 import { MobileCallBar } from './components/MobileCallBar'
+import { RideCheckSection } from './components/RideCheck'
 import { Services } from './components/Services'
 import { WhyChoose } from './components/WhyChoose'
 
@@ -18,6 +19,7 @@ export default function App() {
         <HowItWorks />
         <WhyChoose />
         <GoodToKnow />
+        <RideCheckSection />
         <Contact />
       </main>
       <Footer />

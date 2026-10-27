@@ -26,7 +26,7 @@ export default function BookPage() {
           <div className="planner-rules-navy pointer-events-none absolute inset-0" aria-hidden="true" />
           <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8">
             <h1 id="book-title" className="text-[clamp(2.4rem,5.5vw,4.25rem)] font-bold leading-[1.04] tracking-[-0.03em]">
-              Book a Trip
+              Book a Ride
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-route-100/90 sm:text-xl">
               Tell us where and when, and our office will call you to confirm your ride. Prefer to talk? Call{' '}
@@ -38,7 +38,7 @@ export default function BookPage() {
             <ul className="mt-10 grid gap-3 sm:grid-cols-3">
               {BEFORE_YOU_BOOK.map(({ icon: Icon, title, body }) => (
                 <li key={title} className="flex gap-3 rounded-2xl border border-white/12 bg-white/[0.04] p-5">
-                  <Icon aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-brand-red-light" strokeWidth={1.9} />
+                  <Icon aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-brand-red" strokeWidth={1.9} />
                   <div>
                     <p className="font-bold text-white">{title}</p>
                     <p className="mt-1 text-[0.95rem] text-route-100/80">{body}</p>
@@ -49,7 +49,7 @@ export default function BookPage() {
           </div>
         </section>
 
-        <section aria-label="Trip request form" className="relative bg-paper py-14 sm:py-20">
+        <section aria-label="Ride request form" className="relative bg-paper py-14 sm:py-20">
           <div className="planner-rules pointer-events-none absolute inset-0" aria-hidden="true" />
           <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_20rem] lg:gap-12 lg:px-8">
             <div className="min-w-0">

@@ -26,8 +26,8 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <a href={BOOK_HREF} className="font-bold text-brand-red-light hover:underline">
-                  Book a Trip
+                <a href={BOOK_HREF} className="hover:text-white hover:underline">
+                  Book a Ride
                 </a>
               </li>
             </ul>

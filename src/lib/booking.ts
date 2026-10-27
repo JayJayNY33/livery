@@ -68,7 +68,7 @@ export function validateTrip(t: TripRequest): TripErrors {
 
 export function tripSummary(t: TripRequest) {
   const lines = [
-    'TRIP REQUEST (not confirmed until the office calls back)',
+    'RIDE REQUEST (not confirmed until the office calls back)',
     '',
     `Name: ${t.name.trim()}`,
     `Phone: ${t.phone.trim()}`,
@@ -90,7 +90,7 @@ export function tripSummary(t: TripRequest) {
 }
 
 export function tripMailto(t: TripRequest, to: string) {
-  const subject = `Trip request: ${t.date} ${t.time} – ${t.name.trim()}`
+  const subject = `Ride request: ${t.date} ${t.time} – ${t.name.trim()}`
   return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(tripSummary(t))}`
 }
 

@@ -78,13 +78,13 @@ export function Header() {
                     href={sectionHref(link.href)}
                     aria-current={isActive ? 'location' : undefined}
                     className={`relative rounded-md px-2.5 py-2 text-[0.95rem] xl:px-3 font-medium transition-colors duration-200 ${
-                      isActive ? 'text-brand-red-light' : 'text-brand-red-light/85 hover:text-brand-red-light'
+                      isActive ? 'text-brand-red' : 'text-brand-red hover:text-white'
                     }`}
                   >
                     {link.label}
                     <span
                       aria-hidden="true"
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-red-light transition-transform duration-300 ease-out-expo ${
+                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-red transition-transform duration-300 ease-out-expo ${
                         isActive ? 'scale-x-100' : 'scale-x-0'
                       }`}
                     />
@@ -113,7 +113,7 @@ export function Header() {
           >
             <CalendarPlus aria-hidden="true" className="hidden size-4 sm:block" strokeWidth={2.4} />
             <span className="sm:hidden">Book</span>
-            <span className="hidden sm:inline">Book a Trip</span>
+            <span className="hidden sm:inline">Book a Ride</span>
           </a>
           <button
             ref={toggleRef}
@@ -143,10 +143,10 @@ export function Header() {
                   href={sectionHref(link.href)}
                   onClick={() => setOpen(false)}
                   aria-current={active === link.href ? 'location' : undefined}
-                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-brand-red-light"
+                  className="flex items-center justify-between py-4 font-display text-2xl font-semibold text-brand-red"
                 >
                   {link.label}
-                  {active === link.href && <span className="size-2 rounded-full bg-brand-red-light" aria-hidden="true" />}
+                  {active === link.href && <span className="size-2 rounded-full bg-brand-red" aria-hidden="true" />}
                 </a>
               </li>
             ))}
@@ -156,7 +156,7 @@ export function Header() {
               href={BOOK_HREF}
               className="flex items-center justify-center gap-3 rounded-xl bg-brand-red px-5 py-4 text-lg font-bold text-white"
             >
-              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Trip
+              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Ride
             </a>
             <a
               href={PHONES.main.href}

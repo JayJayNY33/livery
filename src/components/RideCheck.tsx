@@ -35,6 +35,17 @@ const office = (
   </a>
 )
 
+/** Its own home-page section, just before Contact us. */
+export function RideCheckSection() {
+  return (
+    <section id="ride-check" aria-label="Is Fast Track right for my ride?" className="bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <RideCheck />
+      </div>
+    </section>
+  )
+}
+
 export function RideCheck() {
   const [answers, setAnswers] = useState<Partial<Record<QuestionId, Answer>>>({})
   const baseId = useId()

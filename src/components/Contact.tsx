@@ -33,7 +33,7 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
               href={BOOK_HREF}
               className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-xl bg-brand-red px-6 py-3.5 text-lg font-bold text-white transition-colors hover:bg-brand-red-dark"
             >
-              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Trip
+              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Ride
               <ArrowRight aria-hidden="true" className="size-5" />
             </a>
           </div>
@@ -52,7 +52,7 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
               >
                 <span
                   className={`inline-flex size-11 items-center justify-center rounded-full ${
-                    primary ? 'bg-white text-route-700' : 'bg-navy-800 text-brand-red-light'
+                    primary ? 'bg-white text-route-700' : 'bg-navy-800 text-brand-red'
                   }`}
                 >
                   <Icon aria-hidden="true" className="size-5" />

@@ -1,6 +1,5 @@
 import { Phone } from 'lucide-react'
 import { PHONES } from '../data/site'
-import { RideCheck } from './RideCheck'
 
 const STEPS = [
   {
@@ -90,9 +89,6 @@ export function HowItWorks() {
           regular appointments, contact MAS at least three (3) days ahead.
         </p>
 
-        <div className="mt-16">
-          <RideCheck />
-        </div>
       </div>
     </section>
   )
