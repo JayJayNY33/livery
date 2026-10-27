@@ -150,7 +150,8 @@
 }
 
 /* Short gold rule under section headings */
-section h2[id$='-title']::after {
+section h2[id$='-title']::after,
+#faq-title::after {
   content: '';
   display: block;
   width: 3rem;
@@ -158,6 +159,11 @@ section h2[id$='-title']::after {
   margin-top: 1.1rem;
   border-radius: 2px;
   background: var(--color-sun-500);
+}
+
+/* Red brand line between page sections, matching the footer's */
+main > section + section {
+  border-top: 3px solid var(--color-brand-red);
 }
 
 /* FAQ answer typography */

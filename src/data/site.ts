@@ -34,12 +34,12 @@ export const NAV_LINKS = [
   { href: '#services', label: 'Our Services' },
   { href: '#about', label: 'About Us' },
   { href: '#how-it-works', label: 'How It Works' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
   { href: '/reviews', label: 'Reviews' },
 ] as const
 
-/** Section links ("#faq") point back to the home page when used on another page. */
+/** Section links ("#services") point back to the home page when used on another page. */
 export function sectionHref(href: string) {
   const onHome = typeof window === 'undefined' || window.location.pathname === '/' || window.location.pathname.endsWith('/index.html')
   return href.startsWith('#') && !onHome ? `/${href}` : href

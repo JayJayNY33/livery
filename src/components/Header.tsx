@@ -3,12 +3,18 @@ import { Menu, Phone, X } from 'lucide-react'
 import { NAV_LINKS, PHONES, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
+/** '/faq' or '/reviews' when on one of those pages, otherwise null (the home page). */
+function currentPage() {
+  const path = window.location.pathname.replace(/\.html$/, '')
+  return NAV_LINKS.some((l) => l.href === path) ? path : null
+}
+
 function useActiveSection() {
   const [active, setActive] = useState<string>(() =>
-    typeof window !== 'undefined' && window.location.pathname.startsWith('/reviews') ? '/reviews' : '#home',
+    typeof window !== 'undefined' ? (currentPage() ?? '#home') : '#home',
   )
   useEffect(() => {
-    if (window.location.pathname.startsWith('/reviews')) return
+    if (currentPage()) return
     const ids = NAV_LINKS.filter((l) => l.href.startsWith('#')).map((l) => l.href.slice(1))
     const sections = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => !!el)
     const observer = new IntersectionObserver(

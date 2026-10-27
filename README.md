@@ -64,4 +64,4 @@ All in `src/data/`:
 - **Google review link:** in `site.ts`, set `GOOGLE_REVIEW_URL` once the Google Business Profile is set up. A "Review us on Google" button then appears on the Reviews page.
 - **Reviews:** add real reviews, posted with the client's permission, to `REVIEWS` in `reviews.ts`. Until there are any, the Reviews page shows "Be one of our first reviewers".
 
-The Reviews page is `reviews.html` and lives at `/reviews` (`vercel.json` turns on clean URLs). Reviews submitted through its form open the visitor's email app, addressed to the office.
+The site has three pages: home (`index.html`), the FAQ (`faq.html`, at `/faq`) and Reviews (`reviews.html`, at `/reviews`). `vercel.json` turns on clean URLs. Reviews submitted through its form open the visitor's email app, addressed to the office.

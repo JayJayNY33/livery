@@ -22,7 +22,7 @@ type Props = {
 export function WeekStrip({ className = '' }: Props) {
   return (
     <a
-      href="#faq-q-9"
+      href="/faq#faq-q-9"
       aria-label="Example standing order: rides every Monday, Wednesday and Friday. Read what a standing order is."
       className={`group block rounded-2xl border border-white/60 bg-white/95 p-4 text-ink shadow-lift backdrop-blur-sm transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 sm:p-5 ${className}`}
     >

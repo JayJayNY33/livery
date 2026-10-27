@@ -5,7 +5,9 @@ import { FAQS, FAQ_CATEGORIES } from '../data/faqs'
 import type { FaqCategory } from '../data/faqs'
 import { PHONES } from '../data/site'
 
-export function Faq() {
+/** The full FAQ. On its own page (asPage) the heading is the page's h1. */
+export function Faq({ asPage = false }: { asPage?: boolean }) {
+  const Heading = asPage ? 'h1' : 'h2'
   const [filter, setFilter] = useState<FaqCategory | 'all'>('all')
   const [open, setOpen] = useState<Set<number>>(() => new Set([1]))
   const buttons = useRef<Map<number, HTMLButtonElement>>(new Map())
@@ -74,9 +76,9 @@ export function Faq() {
       <div className="planner-rules pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16 lg:px-8">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <h2 id="faq-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
+          <Heading id="faq-title" className="text-[clamp(2.1rem,4vw,3.25rem)] font-bold leading-[1.05] text-navy-900">
             Frequently asked questions
-          </h2>
+          </Heading>
           <p className="mt-5 text-lg text-ink-soft">Your transportation questions, answered. Because your care matters.</p>
           <div className="mt-8 rounded-2xl border border-rule bg-white p-5 shadow-card">
             <p className="font-bold text-navy-900">Still have a question?</p>
