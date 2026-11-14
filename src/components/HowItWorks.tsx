@@ -9,7 +9,7 @@ const STEPS = [
   },
   {
     title: 'Arrange your transportation',
-    body: 'Contact MAS to arrange an eligible Medicaid transportation trip.',
+    body: 'Contact MAS at least 3 days before your appointment to arrange an eligible Medicaid trip.',
     action: { phone: PHONES.mas, label: 'Call MAS' },
   },
   {
@@ -88,9 +88,8 @@ export function HowItWorks() {
           ))}
         </ol>
 
-        <p className="mt-12 max-w-[52ch] text-small text-route-100/75">
-          Provider selection and transportation are subject to MAS authorization, assignment, and availability. For
-          regular appointments, contact MAS at least three (3) days ahead.
+        <p className="mt-12 max-w-[52ch] text-body text-route-100/90">
+          Provider selection and transportation are subject to MAS authorization, assignment, and availability.
         </p>
 
       </div>

@@ -53,7 +53,7 @@ export function ReviewForm() {
   return (
     <form noValidate onSubmit={onSubmit} className="rounded-3xl bg-white p-6 text-ink shadow-lift sm:p-8" aria-labelledby={`${id}-title`}>
       <h2 id={`${id}-title`} className="text-2xl font-bold text-navy-900">
-        Write a review
+        Leave us a review
       </h2>
       <p className="mt-1.5 text-body text-ink-soft">
         Tell us about your ride. When you press send, your email app opens with your review filled in, addressed to

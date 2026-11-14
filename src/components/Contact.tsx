@@ -6,7 +6,7 @@ const LINES: { label: string; display: string; href: string; note: string; icon:
   { ...PHONES.main, note: 'Rides, scheduling, and questions', icon: PhoneCall, primary: true },
   { ...PHONES.secondary, note: 'If the main line is busy', icon: Phone },
   ...(OWNER_PHONE ? [{ ...OWNER_PHONE, label: OWNER_LABEL, note: 'For problems with a ride in progress', icon: Siren }] : []),
-  { ...PHONES.mas, note: 'Arrange Medicaid trips and ask for Fast Track', icon: CalendarRange },
+  { ...PHONES.mas, note: 'After calling us, arrange your Medicaid trip and ask for Fast Track', icon: CalendarRange },
   { label: 'Email', display: EMAIL, href: EMAIL_HREF, note: 'For non-urgent questions', icon: Mail },
 ]
 

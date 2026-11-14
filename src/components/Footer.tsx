@@ -20,7 +20,7 @@ export function Footer() {
             <ul className="mt-2 grid">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={sectionHref(l.href)} className="inline-flex min-h-11 items-center hover:text-white hover:underline">
+                  <a href={sectionHref(l.href)} className="inline-flex min-h-11 min-w-11 items-center hover:text-white hover:underline">
                     {l.label}
                   </a>
                 </li>

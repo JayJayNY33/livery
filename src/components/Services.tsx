@@ -1,6 +1,5 @@
-import { Building2, CalendarSync, Droplet, FileCheck2, Info, Phone, Plus, Stethoscope, Activity } from 'lucide-react'
+import { Building2, CalendarSync, Droplet, FileCheck2, Info, Plus, Stethoscope, Activity } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { PHONES } from '../data/site'
 
 type Service = {
   title: string
@@ -67,7 +66,7 @@ export function Services() {
                 </div>
               </li>
             ))}
-            <li className="flex flex-col gap-4 rounded-2xl border-2 border-dashed border-rule-strong bg-white/60 p-6 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between lg:col-span-3">
+            <li className="rounded-2xl border-2 border-dashed border-rule-strong bg-white/60 p-6 sm:col-span-2 lg:col-span-3">
               <div className="flex gap-4">
                 <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-red/8 text-brand-red">
                   <Plus aria-hidden="true" className="size-6" strokeWidth={2.2} />
@@ -75,17 +74,10 @@ export function Services() {
                 <div>
                   <h3 className="text-title font-semibold text-navy-900">And more</h3>
                   <p className="mt-1 text-ink-soft">
-                    We offer more services than we can list here. Don’t see your trip? Just ask us.
+                    We offer more services than we can list here. Don’t see your trip? Give us a call and ask.
                   </p>
                 </div>
               </div>
-              <a
-                href={PHONES.main.href}
-                className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2.5 rounded-xl bg-route-600 px-5 py-3 font-bold text-white transition-colors hover:bg-route-500"
-              >
-                <Phone aria-hidden="true" className="size-5" />
-                Call <span className="tabular">{PHONES.main.display}</span>
-              </a>
             </li>
           </ul>
 
@@ -95,17 +87,11 @@ export function Services() {
           >
             <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-route-700" />
             <p className="max-w-[52ch]">
-              <strong>Not every trip is automatically covered by Medicaid.</strong> Medicaid transportation is
-              arranged through MAS and is subject to eligibility, authorization, assignment, and availability. Call
-              MAS at{' '}
-              <a href={PHONES.mas.href} className="tabular font-bold text-route-700 underline">
-                {PHONES.mas.display}
-              </a>{' '}
-              or our office at{' '}
-              <a href={PHONES.main.href} className="tabular font-bold text-route-700 underline">
-                {PHONES.main.display}
-              </a>{' '}
-              if you are unsure.
+              <strong>Not every trip is automatically covered by Medicaid.</strong> Eligibility and MAS approval apply.{' '}
+              <a href="#how-it-works" className="font-bold text-route-700 underline">
+                See how Medicaid rides work
+              </a>
+              .
             </p>
           </aside>
         </div>

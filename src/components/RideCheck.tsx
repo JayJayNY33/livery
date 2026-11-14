@@ -50,7 +50,8 @@ export function RideCheck() {
   const [answers, setAnswers] = useState<Partial<Record<QuestionId, Answer>>>({})
   const baseId = useId()
   const answered = QUESTIONS.filter((q) => answers[q.id]).length
-  const complete = answered === QUESTIONS.length
+  // A non-medical trip is already ruled out, so show that answer right away.
+  const complete = answered === QUESTIONS.length || answers.medical === 'no'
   const allYes = complete && QUESTIONS.every((q) => answers[q.id] === 'yes')
 
   return (
@@ -60,7 +61,7 @@ export function RideCheck() {
           <h2 className="text-[clamp(1.6rem,3vw,2.1rem)] font-bold leading-tight text-navy-900">
             Is Fast Track right for my ride?
           </h2>
-          <p className="mt-2 text-ink-soft">Three quick questions. Your next step appears when all three are answered.</p>
+          <p className="mt-2 text-ink-soft">Three quick questions. Your next step appears below as you answer.</p>
           <p className="mt-3 text-body font-bold text-navy-900">
             For a medical emergency, call{' '}
             <a href="tel:911" className="text-alert underline">
@@ -139,12 +140,12 @@ export function RideCheck() {
                   <p className="font-display text-lg font-semibold">Fast Track may be a good fit for this ride.</p>
                   <ul className="mt-2 grid gap-2">
                     <li>
-                      <strong>Using Medicaid?</strong> Call MAS at {mas} and ask for Fast Track as your preferred
-                      provider, then call us at {office} to confirm pickup. Assignment is subject to MAS requirements
-                      and availability.
+                      <strong>First, call us</strong> at {office} to check that we can take your ride on the date and
+                      time you need.
                     </li>
                     <li>
-                      <strong>Not using Medicaid?</strong> Call our office at {office} to ask about your ride.
+                      <strong>Using Medicaid?</strong> Then call MAS at {mas} and ask for Fast Track Car Service as your
+                      preferred provider (subject to MAS approval and availability).
                     </li>
                   </ul>
                 </div>

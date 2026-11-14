@@ -1,4 +1,4 @@
-import { ExternalLink, MessageSquareQuote, Phone, Star } from 'lucide-react'
+import { ExternalLink, MessageSquarePlus, MessageSquareQuote, Phone, Star } from 'lucide-react'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { MobileCallBar } from './components/MobileCallBar'
@@ -66,8 +66,8 @@ export default function ReviewsPage() {
                 href="#write"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-route-600 px-6 py-4 text-lg font-bold text-white shadow-card transition-colors hover:bg-route-500"
               >
-                <Star aria-hidden="true" className="size-5 fill-sun-500 text-sun-500" />
-                Write a review
+                <MessageSquarePlus aria-hidden="true" className="size-5" />
+                Leave us a review
               </a>
               {GOOGLE_REVIEW_URL && (
                 <a
@@ -96,14 +96,29 @@ export default function ReviewsPage() {
                 ))}
               </ul>
             ) : (
-              <div className="mt-10 flex max-w-2xl gap-4 rounded-2xl border border-rule bg-white p-6 shadow-card">
-                <MessageSquareQuote aria-hidden="true" className="mt-0.5 size-7 shrink-0 text-sun-600" />
-                <div>
-                  <p className="font-display text-xl font-semibold text-navy-900">Be one of our first reviewers</p>
-                  <p className="mt-1.5 text-ink-soft">
-                    Reviews appear here after clients share them and agree to have them posted. If you’ve ridden with
-                    us, we would love to hear how it went.
+              <div className="mt-10 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+                <div className="flex gap-4 rounded-2xl border border-rule bg-white p-6 shadow-card">
+                  <MessageSquareQuote aria-hidden="true" className="mt-0.5 size-7 shrink-0 text-route-600" />
+                  <div>
+                    <p className="font-display text-xl font-semibold text-navy-900">Be one of our first reviewers</p>
+                    <p className="mt-1.5 text-ink-soft">
+                      Reviews appear here after clients share them and agree to have them posted. If you’ve ridden
+                      with us, we would love to hear how it went.
+                    </p>
+                  </div>
+                </div>
+                <div className="rounded-2xl bg-navy-900 p-6 text-white">
+                  <p className="font-display text-xl font-semibold">Driving Long Island patients since 2017</p>
+                  <p className="mt-1.5 text-route-100/90">
+                    Have a question before your first ride? Our office is happy to help.
                   </p>
+                  <a
+                    href={PHONES.main.href}
+                    className="mt-4 inline-flex min-h-11 items-center gap-2.5 rounded-xl bg-route-600 px-5 py-3 font-bold text-white hover:bg-route-500"
+                  >
+                    <Phone aria-hidden="true" className="size-5" />
+                    Call <span className="tabular">{PHONES.main.display}</span>
+                  </a>
                 </div>
               </div>
             )}
