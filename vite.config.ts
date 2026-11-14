@@ -10,7 +10,6 @@ export default defineConfig({
         main: 'index.html',
         reviews: 'reviews.html',
         faq: 'faq.html',
-        book: 'book.html',
       },
     },
   },

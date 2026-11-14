@@ -35,18 +35,19 @@ export function WhyChoose() {
             </h2>
             <div className="mt-7 grid max-w-[38rem] gap-5 text-lg text-ink-soft">
               <p>
-                Fast Track Medical &amp; Livery Transportation is a Long Island, New York company committed to
-                dependable non-emergency medical transportation. We drive patients to the appointments that keep them
-                well: doctor and specialist visits, hospital and outpatient care, dialysis, physical therapy, and
-                rehabilitation.
+                Since December 16, 2017, Fast Track Medical &amp; Livery Transportation has been driving Long Island
+                patients to the care they need: doctor and specialist visits, hospital and outpatient care, dialysis,
+                physical therapy, and rehabilitation.
               </p>
               <p>
-                A missed ride can mean a missed treatment. That is why we focus on getting every passenger there
-                safely, comfortably, and on time, and on getting them home again without an unnecessary wait.
+                We know how much depends on getting you to your appointment. A missed ride can mean a missed treatment,
+                so we plan every trip with care and do everything we can to get you there safely, comfortably, and on
+                time, and to get you home again without an unnecessary wait.
               </p>
               <p>
-                We work with patients, families, caregivers, and healthcare coordinators. We treat every passenger
-                with patience and respect, because for us, this work is about people, not just destinations.
+                Every patient matters to us. We treat each person with patience, dignity, and respect, and we work
+                closely with families, caregivers, and healthcare coordinators, because for us this work is about
+                people, not just destinations.
               </p>
             </div>
           </div>

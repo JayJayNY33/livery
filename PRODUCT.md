@@ -51,7 +51,8 @@ A small, personal NEMT provider: the same faces, attention to recurring riders, 
 - FAQ source of truth: Fast_Track_Deep_Blue_Interactive_FAQ.html (15 Q&As), preserved verbatim.
 - Phones: 631-406-9922 (main), 631-750-3666 (secondary). Email: fasttrackcarservice2020@gmail.com.
 - No real fleet or driver photos: licensed stock used as stand-ins, listed for replacement.
-- Absent and must not be invented: street address, years in business, fleet size, certifications, licensing, insurance, awards, testimonials, ratings, guaranteed times, service-area list.
+- In business since December 16, 2017 (confirmed by the client, Oct 2026).
+- Absent and must not be invented: street address, fleet size, certifications, licensing, insurance, awards, testimonials, ratings, guaranteed times, service-area list.
 
 ## Product Principles
 

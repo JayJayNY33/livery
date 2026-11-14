@@ -1,6 +1,6 @@
-import { ArrowRight, CalendarPlus, CalendarRange, Mail, Phone, PhoneCall, Siren } from 'lucide-react'
+import { CalendarRange, Mail, Phone, PhoneCall, Siren } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { BOOK_HREF, EMAIL, EMAIL_HREF, EMERGENCY, OWNER_LABEL, OWNER_PHONE, PHONES } from '../data/site'
+import { EMAIL, EMAIL_HREF, EMERGENCY, OWNER_LABEL, OWNER_PHONE, PHONES } from '../data/site'
 
 const LINES: { label: string; display: string; href: string; note: string; icon: LucideIcon; primary?: boolean }[] = [
   { ...PHONES.main, note: 'Rides, scheduling, and questions', icon: PhoneCall, primary: true },
@@ -10,8 +10,8 @@ const LINES: { label: string; display: string; href: string; note: string; icon:
   { label: 'Email', display: EMAIL, href: EMAIL_HREF, note: 'For non-urgent questions', icon: Mail },
 ]
 
-/** A link to book online (except on the booking page), contact numbers in columns, then the 911 notice. */
-export function Contact({ showBooking = true }: { showBooking?: boolean }) {
+/** Contact numbers in columns, then the 911 notice. */
+export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-title" className="on-navy relative overflow-hidden bg-navy-900 py-20 text-white sm:py-24">
       <div className="planner-rules-navy pointer-events-none absolute inset-0" aria-hidden="true" />
@@ -23,23 +23,7 @@ export function Contact({ showBooking = true }: { showBooking?: boolean }) {
           Call our office to ask about a ride, confirm a pickup, or set up recurring transportation.
         </p>
 
-        {showBooking && (
-          <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-white/12 bg-white/[0.04] px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-lg">
-              <span className="font-bold">Prefer to book online?</span>{' '}
-              <span className="text-route-100/85">Send us your trip details and we’ll call to confirm.</span>
-            </p>
-            <a
-              href={BOOK_HREF}
-              className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-xl bg-brand-red px-6 py-3.5 text-lg font-bold text-white transition-colors hover:bg-brand-red-dark"
-            >
-              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Ride
-              <ArrowRight aria-hidden="true" className="size-5" />
-            </a>
-          </div>
-        )}
-
-        <ul className={`${showBooking ? 'mt-6' : 'mt-10'} grid gap-4 sm:grid-cols-2 lg:grid-cols-4`}>
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {LINES.map(({ label, display, href, note, icon: Icon, primary }) => (
             <li key={label} className="min-w-0">
               <a

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { CalendarPlus, Menu, Phone, X } from 'lucide-react'
-import { BOOK_HREF, NAV_LINKS, PHONES, sectionHref } from '../data/site'
+import { Menu, Phone, X } from 'lucide-react'
+import { NAV_LINKS, PHONES, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
-/** The page path ('/faq', '/reviews', '/book') on any page except home, where it is null. */
+/** The page path ('/faq', '/reviews') on any page except home, where it is null. */
 function currentPage() {
   const path = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '')
   return path === '' || path === '/index' ? null : path
@@ -106,15 +106,6 @@ export function Header() {
               Call Us <span className="tabular hidden font-normal text-route-100 xl:inline">{PHONES.main.display}</span>
             </span>
           </a>
-          <a
-            href={BOOK_HREF}
-            aria-current={active === BOOK_HREF ? 'page' : undefined}
-            className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand-red px-3.5 py-2.5 text-small font-bold text-white shadow-[0_2px_8px_-2px_rgb(6_20_40/0.5)] transition-colors duration-200 hover:bg-brand-red-dark sm:px-4"
-          >
-            <CalendarPlus aria-hidden="true" className="hidden size-4 sm:block" strokeWidth={2.4} />
-            <span className="sm:hidden">Book</span>
-            <span className="hidden sm:inline">Book a Ride</span>
-          </a>
           <button
             ref={toggleRef}
             type="button"
@@ -152,12 +143,6 @@ export function Header() {
             ))}
           </ul>
           <div className="mt-8 grid gap-3">
-            <a
-              href={BOOK_HREF}
-              className="flex items-center justify-center gap-3 rounded-xl bg-brand-red px-5 py-4 text-lg font-bold text-white"
-            >
-              <CalendarPlus aria-hidden="true" className="size-5" /> Book a Ride
-            </a>
             <a
               href={PHONES.main.href}
               className="flex items-center justify-center gap-3 rounded-xl bg-route-600 px-5 py-4 text-lg font-bold text-white"

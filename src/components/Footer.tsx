@@ -1,4 +1,4 @@
-import { BOOK_HREF, BUSINESS_NAME, EMAIL, EMAIL_HREF, EMERGENCY, NAV_LINKS, OWNER_LABEL, OWNER_PHONE, PHONES, TAGLINE, sectionHref } from '../data/site'
+import { BUSINESS_NAME, EMAIL, EMAIL_HREF, EMERGENCY, NAV_LINKS, OWNER_LABEL, OWNER_PHONE, PHONES, TAGLINE, sectionHref } from '../data/site'
 import { Logo } from './Logo'
 
 export function Footer() {
@@ -25,11 +25,6 @@ export function Footer() {
                   </a>
                 </li>
               ))}
-              <li>
-                <a href={BOOK_HREF} className="inline-flex min-h-11 items-center hover:text-white hover:underline">
-                  Book a Ride
-                </a>
-              </li>
             </ul>
           </nav>
 

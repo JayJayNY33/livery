@@ -49,6 +49,14 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto flex w-full max-w-[34rem] flex-col justify-center lg:max-w-none">
+          <a
+            href="/reviews#write"
+            className="group mb-5 inline-flex items-center gap-3 self-start rounded-2xl bg-white px-6 py-4 font-display text-[clamp(1.5rem,2.6vw,2.1rem)] font-bold leading-none tracking-[-0.02em] text-navy-900 shadow-lift transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 lg:self-end"
+          >
+            <MessageSquarePlus aria-hidden="true" className="size-8 shrink-0 text-brand-red" strokeWidth={2} />
+            Leave us a review
+            <ArrowRight aria-hidden="true" className="size-7 shrink-0 text-route-600 transition-transform duration-300 ease-out-expo group-hover:translate-x-1" />
+          </a>
           <div className="relative overflow-hidden rounded-[1.25rem] shadow-[0_40px_80px_-40px_rgb(0_0_0/0.7)] ring-1 ring-white/10">
             <img
               src="/images/hero-960.webp"
@@ -65,14 +73,6 @@ export function Hero() {
               aria-hidden="true"
             />
           </div>
-          <a
-            href="/reviews#write"
-            className="group mt-5 inline-flex min-h-11 items-center gap-3 self-start rounded-xl border border-white/25 px-5 py-3 font-display text-title font-semibold text-white transition-colors duration-200 hover:border-white/60 hover:bg-white/5 lg:self-end"
-          >
-            <MessageSquarePlus aria-hidden="true" className="size-6 text-route-300" strokeWidth={2} />
-            Leave us a review
-            <ArrowRight aria-hidden="true" className="size-5 transition-transform duration-300 ease-out-expo group-hover:translate-x-1" />
-          </a>
         </div>
       </div>
     </section>

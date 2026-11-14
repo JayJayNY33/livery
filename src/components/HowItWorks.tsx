@@ -3,6 +3,11 @@ import { PHONES } from '../data/site'
 
 const STEPS = [
   {
+    title: 'Call Fast Track first',
+    body: 'Call our office to see if we can set up your ride on the date and time you need. Then start the next steps.',
+    action: { phone: PHONES.main, label: 'Call our office' },
+  },
+  {
     title: 'Arrange your transportation',
     body: 'Contact MAS to arrange an eligible Medicaid transportation trip.',
     action: { phone: PHONES.mas, label: 'Call MAS' },
@@ -34,8 +39,8 @@ export function HowItWorks() {
               How it works
             </h2>
             <p className="mt-5 max-w-xl text-lg text-route-100/85">
-              Medicaid rides on Long Island are scheduled through Medical Answering Services (MAS). Here is how to
-              get Fast Track as your provider.
+              Start with a quick call to us. Medicaid rides on Long Island are then scheduled through Medical
+              Answering Services (MAS). Here is how to get Fast Track as your provider.
             </p>
           </div>
           <a
@@ -54,7 +59,7 @@ export function HowItWorks() {
           </a>
         </div>
 
-        <ol className="mt-14 grid gap-10 lg:grid-cols-3 lg:gap-8">
+        <ol className="mt-14 grid gap-10 lg:grid-cols-4 lg:gap-8">
           {STEPS.map((step, i) => (
             <li key={step.title} className="relative pl-16 lg:pl-0">
               {i < STEPS.length - 1 && (
